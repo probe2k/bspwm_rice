@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 XF86Search
-	rofi -show run
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + shift + c
