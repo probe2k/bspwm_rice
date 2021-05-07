@@ -68,7 +68,7 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 label-occupied = %name%
 label-occupied-padding = 2
-label-urgent = %name%!
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 label-empty = %name%
@@ -182,3 +182,5 @@ format-underline = #ff0099
 format-padding = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+
+; vim:ft=dosini
