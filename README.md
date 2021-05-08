@@ -1,5 +1,6 @@
 # bspwm_rice
 ![desktop](screenshots/img.png)
+![desktop](screenshots/img2.png)
 ## Info
 
 1. [bspwm](https://github.com/probe2k/bspwm_rice/blob/master/bspwm/bspwmrc)
