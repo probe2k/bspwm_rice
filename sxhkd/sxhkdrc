@@ -98,7 +98,7 @@ super + shift + r
 
 # quit bspwm
 super + alt + q
-	bspc quit
+	/home/probe/.config/scripts/exitX.sh
 
 # close
 super + shift + q
