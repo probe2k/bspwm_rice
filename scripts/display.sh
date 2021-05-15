@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Map to XF86 keysym - Dell Inspiron 5570 -- $mod+p mapper -- Maps respective to F8
 # Configure executable permission - user access for dmenu `chmod + x`
@@ -10,19 +10,16 @@ IN_SIG="eDP1"
 choices="Internal\nDualSetup\nExternal\nClone"
 
 # Select options
-chosen=$(echo -e $choices | dmenu)
+chosen=$(echo $choices | dmenu)
 
 # Signal classification based on port directive
 if [ `xrandr | grep DP1 | grep -c ' connected '` -eq 1 ]; then
 	EX_SIG="DP1"
-fi
-if [ `xrandr | grep HDMI1 | grep -c ' connected '` -eq 1]; then
+elif [ `xrandr | grep HDMI1 | grep -c ' connected '` -eq 1 ]; then
 	EX_SIG="HDMI1"
-fi
-if [ `xrandr | grep HDMI2 | grep -c ' connected '` -eq 1]; then
+elif [ `xrandr | grep HDMI2 | grep -c ' connected '` -eq 1 ]; then
 	EX_SIG="HDMI2"
-fi
-if [ `xrandr | grep VIRTUAL1 | grep -c ' connected '` -eq 1]; then
+elif [ `xrandr | grep VIRTUAL1 | grep -c ' connected '` -eq 1 ]; then
 	EX_SIG="VIRTUAL1"
 fi
 

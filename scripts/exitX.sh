@@ -1,3 +1,3 @@
 #!/bin/sh
 
-[ "$(echo "Yes\nNo" | dmenu -p "Do you want to exit bspwm?")" = "Yes" ] && bspc quit
+[ "$(echo "Yes\nNo" | dmenu -p "Exit BSPWM?")" = "Yes" ] && bspc quit
