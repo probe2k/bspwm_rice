@@ -2,12 +2,11 @@ set showtabline=2
 set noshowmode
 set autoindent
 set encoding=UTF-8
-set termguicolors
 set t_Co=256
 syntax enable
+set termguicolors
 let g:material_terminal_italics = 1
 colorscheme oblivion-dark
-set title titlestring=\ nvim\ -\ %t\ %M
 set history=100
 
 " Tabbing to 4
@@ -25,3 +24,7 @@ set number
 set ignorecase
 set smartcase
 set splitright splitbelow
+set guicursor=
+
+let g:NERDTreeWinPos = "right"
+
