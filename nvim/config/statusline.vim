@@ -81,10 +81,10 @@ function! SetModifiedSymbol(modified) " {{{
 endfunction
 
 function! FiletypeIcon()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' : ' ') : ''
+    return winwidth(0) > 30 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' : ' ') : ''
 endfunction
 function! SetFiletype(filetype) " {{{
-    if winwidth(0) > 70
+    if winwidth(0) > 30
         hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#d990cd
         hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#d990cd guifg=#272c38
         hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=8    ctermfg=5 guibg=#272c38 guifg=#d990cd
@@ -104,7 +104,7 @@ function! SetFiletype(filetype) " {{{
 endfunction
 
 function GitBranchIcon()
-    if strlen(FugitiveHead())>0 && winwidth(0) > 70
+    if strlen(FugitiveHead())>0 && winwidth(0) > 30
         hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=4 guibg=none    guifg=#81d4ee
         hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=4 ctermfg=0 guibg=#81d4ee    guifg=#272c38
         hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=8    ctermfg=4 guibg=#272c38 guifg=#81d4ee
