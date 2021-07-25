@@ -6,7 +6,7 @@ set t_Co=256
 syntax enable
 set termguicolors
 let g:material_terminal_italics = 1
-colorscheme oblivion-dark
+colorscheme moonlight
 set history=100
 
 " Tabbing to 4
@@ -26,5 +26,4 @@ set smartcase
 set splitright splitbelow
 set guicursor=
 
-let g:NERDTreeWinPos = "right"
-
+hi Normal guibg=NONE ctermbg=NONE
