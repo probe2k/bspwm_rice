@@ -71,13 +71,13 @@ endfunction
 
 function! SetModifiedSymbol(modified) " {{{
     if a:modified == 1
-        hi CustomStatuslineModifiedBody cterm=none gui=none ctermbg=1 ctermfg=0 guibg=#fc8993 guifg=#272c38
-        hi CustomStatuslineModified cterm=none gui=none ctermbg=none ctermfg=1 guibg=none guifg=#fc8993 
+        hi CustomStatuslineModifiedBody cterm=none gui=none ctermbg=1 ctermfg=0 guibg=none guifg=#ff0000
+        hi CustomStatuslineModified cterm=none gui=none ctermbg=none ctermfg=1 guibg=none guifg=none 
     else
-        hi CustomStatuslineModifiedBody cterm=none gui=none ctermbg=0 ctermfg=2 guibg=#0F111A guifg=#89e19c
-        hi CustomStatuslineModified cterm=none gui=none ctermbg=0 ctermfg=0 guibg=none guifg=#0F111A
+        hi CustomStatuslineModifiedBody cterm=none gui=none ctermbg=0 ctermfg=2 guibg=none guifg=#89e19c
+        hi CustomStatuslineModified cterm=none gui=none ctermbg=0 ctermfg=0 guibg=none guifg=none
     endif
-    return ''
+    return '  '
 endfunction
 
 function! FiletypeIcon()
@@ -86,7 +86,7 @@ endfunction
 function! SetFiletype(filetype) " {{{
     if winwidth(0) > 70
         hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#d990cd
-        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5 ctermfg=0 guibg=#d990cd guifg=#272c38
+        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#d990cd guifg=#272c38
         hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=8    ctermfg=5 guibg=#272c38 guifg=#d990cd
         hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=8 guibg=none    guifg=#272c38
         if a:filetype == ''
@@ -96,7 +96,7 @@ function! SetFiletype(filetype) " {{{
         endif
     else 
         hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0F111A
-        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5 ctermfg=0 guibg=#0F111A guifg=#0F111A
+        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#0F111A guifg=#0F111A
         hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=5    ctermfg=5 guibg=#0F111A guifg=#0F111A
         hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0F111A
         return ''
@@ -106,7 +106,7 @@ endfunction
 function GitBranchIcon()
     if strlen(FugitiveHead())>0 && winwidth(0) > 70
         hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=4 guibg=none    guifg=#81d4ee
-        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=4 ctermfg=0 guibg=#81d4ee guifg=#272c38
+        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=4 ctermfg=0 guibg=#81d4ee    guifg=#272c38
         hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=8    ctermfg=4 guibg=#272c38 guifg=#81d4ee
         hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=8 guibg=none    guifg=#272c38
         return ' '
@@ -159,9 +159,9 @@ function! SetActiveStatusLine()
     let statusline .= "%#CustomStatuslineFilename#\ %t"
     let statusline .= "%#CustomStatuslineFiletypeSeparator#\ "
     " Modified status
-    let statusline .= "%#CustomStatuslineModified#"
+    let statusline .= "%#CustomStatuslineModified#"
     let statusline .= "%#CustomStatuslineModifiedBody#%{SetModifiedSymbol(&modified)}"
-    let statusline .= "%#CustomStatuslineModified#"
+    let statusline .= "%#CustomStatuslineModified# "
     " Right side items
     " =======================
     let statusline .= "%="
@@ -203,9 +203,9 @@ function! SetInactiveStatusLine()
     let statusline .= "%#CustomStatuslineFilename#\ %t\ "
     let statusline .= "%#CustomStatuslineSeparator#\ "
     " Modified status
-    let statusline .= "%#CustomStatuslineModified#"
+    let statusline .= "%#CustomStatuslineModified#"
     let statusline .= "%#CustomStatuslineModifiedBody#%{SetModifiedSymbol(&modified)}"
-    let statusline .= "%#CustomStatuslineModified#"
+    let statusline .= "%#CustomStatuslineModified# "
     " Right side items
     " =======================
     let statusline .= "%="
