@@ -46,7 +46,7 @@ endfun
 
 " Default colors
 "set background=dark
-let s:bg = { 'gui': '#0F111A', 'cterm': 'none' }
+let s:bg = { 'gui': 'none', 'cterm': 'none' }
 let s:fg = { 'gui': '#e3e3e3', 'cterm': 231 }
 let s:invisibles = { 'gui': '#65738e', 'cterm': 66 }
 let s:comments = { 'gui': '#9ba1ab', 'cterm': 145 }
@@ -445,7 +445,7 @@ call s:SetHighlight('CocInfoSign', s:green, '', '')
 if has('nvim')
   let g:terminal_color_foreground = '#e3f1e4'
   let g:terminal_color_background = '#0f111a'
-  let g:terminal_color_0  = '#0F111A'
+  let g:terminal_color_0  = 'none'
   let g:terminal_color_1  = '#fc8993'
   let g:terminal_color_2  = '#89e19c'
   let g:terminal_color_3  = '#fbdf90'
