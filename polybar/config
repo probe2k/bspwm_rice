@@ -72,7 +72,6 @@ label = %percentage%%
 type = internal/date
 interval = 5
 date = " %h %d %a"
-date-alt = " %Y-%m-%d"
 format-foreground= ${colors.light_blue}
 label = %date% 
 
@@ -80,7 +79,6 @@ label = %date%
 type = internal/date
 interval = 1
 time = " %I:%M %p"
-time-alt = " %H:%M:%S"
 format-foreground = ${colors.yellow}
 label = %time%
 
