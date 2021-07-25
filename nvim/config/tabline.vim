@@ -4,7 +4,7 @@ hi TablineFiletypeBody      cterm=none   gui=none   ctermbg=8    ctermfg=5 guibg
 hi TablineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=8 guibg=none    guifg=#272c38
 
 function! FiletypeIcon()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' : ' ') : ''
+    return winwidth(0) > 10 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() . ' ' : ' ') : ''
 endfunction
 
 function! SetTabline()
