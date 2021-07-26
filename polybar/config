@@ -11,6 +11,7 @@ red = #ec7279
 yellow = #ECBE7B
 alert = #ff7f7f
 disc = #fadadd
+char = #98FB98
 
 [settings]
 screenchange-reload = true
@@ -106,7 +107,7 @@ adapter = AC
 format-full =  100
 format-charging =  <label-charging>
 format-discharging =  <label-discharging>
-format-charging-foreground = ${colors.green}
+format-charging-foreground = ${colors.char}
 format-full-foreground = ${colors.blue}
 format-discharging-foreground = ${colors.disc}
 
