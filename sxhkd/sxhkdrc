@@ -26,7 +26,7 @@ super + shift + p
 
 # browser
 super + shift + Return
-	brave
+	brave --use-gl=desktop --enable-features=VaapiVideoDecoder
 
 # lock screen
 super + l
@@ -205,4 +205,4 @@ super + shift + {h,j,k,l}
 
 # move a floating window
 super + ctrl + {Left,Down,Up,Right}
-	bspc node -v {-10 0,0 10,0 -10,10 0}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
