@@ -96,7 +96,6 @@ format-volume-foreground = ${colors.purple}
 format-muted = <label-muted>
 format-muted-prefix = 婢
 format-muted-foreground = ${colors.red}
-format-muted-underline = ${colors.red}
 label-volume = %percentage%%
 label-muted = " Muted"
 ramp-volume-0 = 奄
