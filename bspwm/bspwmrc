@@ -1,7 +1,7 @@
 #!/bin/sh
 
 nm-applet &
-picom &
+picom --experimental-backends &
 xrandr --output eDP1 --gamma 0.8:0.8:0.8 &
 xset -b &
 feh --bg-scale /home/probe/.config/bspwm/wal.jpg &
@@ -11,7 +11,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_width        0 
+bspc config border_width        0
 bspc config window_gap          25
 bspc config top_padding         25
 
