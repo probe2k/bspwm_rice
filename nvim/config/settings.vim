@@ -16,7 +16,6 @@ set shiftwidth=4
 
 " Basics
 set nowrap
-set cursorline
 set relativenumber
 set number
 
