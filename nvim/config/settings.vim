@@ -5,7 +5,6 @@ set encoding=UTF-8
 set t_Co=256
 syntax enable
 set termguicolors
-let g:material_terminal_italics = 1
 colorscheme moonlight
 set history=100
 
@@ -25,5 +24,3 @@ set ignorecase
 set smartcase
 set splitright splitbelow
 set guicursor=
-
-hi Normal guibg=NONE ctermbg=NONE
