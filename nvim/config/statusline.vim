@@ -95,26 +95,26 @@ function! SetFiletype(filetype) " {{{
             return a:filetype
         endif
     else 
-        hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0F111A
-        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#0F111A guifg=#0F111A
-        hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=5    ctermfg=5 guibg=#0F111A guifg=#0F111A
-        hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0F111A
+        hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#000000
+        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=5    ctermfg=5 guibg=#000000 guifg=#000000
+        hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#000000
         return ''
     endif
 endfunction
 
 function GitBranchIcon()
     if strlen(FugitiveHead())>0 && winwidth(0) > 30
-        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=4 guibg=none    guifg=#81d4ee
-        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=4 ctermfg=0 guibg=#81d4ee    guifg=#272c38
-        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=8    ctermfg=4 guibg=#272c38 guifg=#81d4ee
+        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=4 guibg=none    guifg=#00ffff
+        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=4 ctermfg=0 guibg=#00ffff    guifg=#272c38
+        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=8    ctermfg=4 guibg=#272c38 guifg=#00ffff
         hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=8 guibg=none    guifg=#272c38
         return ' '
     else
-        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#0F111A
-        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#0F111A guifg=#0F111A
-        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#0F111A guifg=#0F111A
-        hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#0F111A
+        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#000000
+        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#000000
         return ''
     endif
 endfunction
