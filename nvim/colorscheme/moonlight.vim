@@ -19,9 +19,9 @@ endif
 
 let g:moonlight_bold = get(g:, 'moonlight_bold', 0)
 hi link ColorColumn CursorLine
-hi Cursor guifg=#222436 ctermfg=235 guibg=#82aaff ctermbg=111 gui=NONE cterm=NONE
+hi Cursor guifg=#222436 ctermfg=235 guibg=#0e111b ctermbg=111 gui=NONE cterm=NONE
 hi link CursorColumn CursorLine
-hi CursorLine guibg=#202020 ctermbg=236 gui=NONE cterm=NONE
+hi CursorLine guibg=#111111 ctermbg=236 gui=NONE cterm=NONE
 hi Directory guifg=#82aaff ctermfg=111 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi DiffAdd guifg=#161a2a ctermfg=234 guibg=#c3e88d ctermbg=150 gui=NONE cterm=NONE
 hi DiffChange guifg=#161a2a ctermfg=234 guibg=#82aaff ctermbg=111 gui=NONE cterm=NONE
@@ -31,10 +31,10 @@ hi ErrorMsg guifg=#ff757f ctermfg=210 guibg=NONE ctermbg=NONE gui=NONE cterm=NON
 hi VertSplit guifg=#161a2a ctermfg=234 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Folded guifg=#7a88cf ctermfg=104 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi IncSearch guifg=#ffc777 ctermfg=222 guibg=#444a73 ctermbg=239 gui=NONE cterm=NONE
-hi LineNr guifg=#444a73 ctermfg=239 guibg=#222436 ctermbg=235 gui=NONE cterm=NONE
+hi LineNr guifg=#444a73 ctermfg=239 guibg=NONE ctermbg=235 gui=NONE cterm=NONE
 hi MatchParen guifg=#82aaff ctermfg=111 guibg=#2f334d ctermbg=236 gui=NONE cterm=NONE
 hi NonText guifg=#828bb8 ctermfg=103 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Normal guifg=#c8d3f5 ctermfg=189 guibg=#212337 ctermbg=235 gui=NONE cterm=NONE
+hi Normal guifg=#c8d3f5 ctermfg=189 guibg=#NONE ctermbg=235 gui=NONE cterm=NONE
 hi PMenu guibg=#222436 ctermbg=235 gui=NONE cterm=NONE
 hi PMenuSel guibg=#2f334d ctermbg=236 gui=NONE cterm=NONE
 hi PmenuSbar guibg=#191a2a ctermbg=234 gui=NONE cterm=NONE
