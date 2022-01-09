@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    # geometry = "400x100-10+30"
+    geometry = "400x100-10+30"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -46,7 +46,7 @@
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    # notification_height = 0
+    notification_height = 0
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = fixed 11
+    font = fixed 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -109,7 +109,7 @@
     #        specific applications *IS GREATLY DISCOURAGED*.
     #
     # no:    Disable markup parsing, incoming notifications will be treated as
-    #        plain text. Dunst will not advertise that it has the body-markup
+    #        plain text. Dunst willnot advertise that it has the body-markup
     #        capability if this is set as a global setting.
     #
     # It's important to note that markup inside the format option will be parsed
@@ -206,7 +206,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    # startup_notification = false
+    startup_notification = false
 
     # Manage dunst's desire for talking
     # Can be one of the following values:
@@ -215,7 +215,7 @@
     #  mesg: Important Messages
     #  info: all unimportant stuff
     # debug: all less than unimportant stuff
-    # verbosity = mesg
+    verbosity = mesg
 
     # Define the corner radius of the notification window
     # in pixel size. If the radius is 0, you have no rounded
@@ -427,4 +427,4 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 #
-# vim: ft=cfg
+# vim: ft=cfg 
