@@ -1,6 +1,6 @@
 nnoremap <Tab> : bnext!<CR>
 nnoremap <S-Tab> : bprevious!<CR>
-nnoremap <C-Del> : bdelete<CR>
+nnoremap <Del> : bdelete<CR>
 nnoremap <S-Del> : bdelete!<CR>
 nnoremap <C-n> : execute ":buffer ".(bufnr("%") + 1)<CR>
 nnoremap <C-p> : execute ":buffer ".(bufnr("%") - 1)<CR>

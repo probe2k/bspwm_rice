@@ -23,3 +23,4 @@ set ignorecase
 set smartcase
 set splitright splitbelow
 set guicursor=
+set clipboard+=unnamedplus
