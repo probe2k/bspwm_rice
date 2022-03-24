@@ -26,7 +26,7 @@ super + shift + p
 
 # browser
 super + shift + Return
-	brave --use-gl=desktop --enable-features=VaapiVideoDecoder
+	brave --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder
 
 # lock screen
 super + l
@@ -45,19 +45,19 @@ Print
 	scrot -q 100 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 ctrl + Print
-	scrot -uq 100 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
+	scrot -u -q 100 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 shift + @Print
-	scrot -sq 100 -l style=dash --freeze '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
+	scrot -s -q 100 -l style=dash --freeze '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 super + Print
 	scrot -q 100 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 super + ctrl + Print
-	scrot -uq 100 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot -u -q 100 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 super + shift + @Print
-	scrot -sq 100 -l style=dash --freeze '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot -s -q 100 -l style=dash --freeze '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 # volume
 XF86AudioRaiseVolume
