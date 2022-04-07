@@ -1,0 +1,11 @@
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set icons
+set period 1
+set cleaner '/home/probe/.config/lf/cleaner'
+set previewer '/home/probe/.config/lf/scope'
+
+map D delete
+map A rename
+map <enter> shell
