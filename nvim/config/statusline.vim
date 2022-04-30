@@ -95,10 +95,10 @@ function! SetFiletype(filetype) " {{{
             return a:filetype
         endif
     else 
-        hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0f101b
-        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#0f101b guifg=#0f101b
-        hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=5    ctermfg=5 guibg=#0f101b guifg=#0f101b
-        hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#0f101b
+        hi CustomStatuslineFiletype          cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#000000
+        hi CustomStatuslineFiletypeIcon      cterm=none   gui=none   ctermbg=5    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineFiletypeBody      cterm=italic gui=italic ctermbg=5    ctermfg=5 guibg=#000000 guifg=#000000
+        hi CustomStatuslineFiletypeSeparator cterm=none   gui=none   ctermbg=none ctermfg=5 guibg=none    guifg=#000000
         return ''
     endif
 endfunction
@@ -111,10 +111,10 @@ function GitBranchIcon()
         hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=8 guibg=none    guifg=#272c38
         return ' '
     else
-        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#0f101b
-        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#0f101b guifg=#0f101b
-        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#0f101b guifg=#0f101b
-        hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#0f101b
+        hi CustomStatuslineGitbranch          cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#000000
+        hi CustomStatuslineGitbranchIcon      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineGitbranchBody      cterm=none gui=none ctermbg=0    ctermfg=0 guibg=#000000 guifg=#000000
+        hi CustomStatuslineGitbranchSeparator cterm=none gui=none ctermbg=none ctermfg=0 guibg=none    guifg=#000000
         return ''
     endif
 endfunction
