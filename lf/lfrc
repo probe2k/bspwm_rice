@@ -1,4 +1,6 @@
-set icons
+set icons true
+set drawbox true
+set preview true
 
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
