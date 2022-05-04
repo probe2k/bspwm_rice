@@ -1,10 +1,11 @@
-set shellopts '-eu'
-set ifs "\n"
-set scrolloff 10
 set icons
-set period 1
-set cleaner '/home/probe/.config/lf/cleaner'
-set previewer '/home/probe/.config/lf/scope'
+
+cmd open ${{
+	case $(file --mime-type "$f" -bL) in
+		text/*|application/json) v "$f" ;;
+		*) setsid -f xdg-open "$f" ;;
+	esac
+}}
 
 map D delete
 map A rename
