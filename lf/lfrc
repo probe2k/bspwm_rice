@@ -11,6 +11,16 @@ cmd open ${{
 	esac
 }}
 
+cmd wall_temp ${{
+	feh --bg-scale "$f"
+}}
+
+cmd mkwall ${{
+	cp "$f" /home/probe/.config/bspwm/wal.jpg && bspc wm -r
+}}
+
+map bG mkwall
+map bg wall_temp
 map D delete
 map A rename
 map <enter> shell
