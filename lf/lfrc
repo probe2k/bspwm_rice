@@ -1,8 +1,8 @@
 set icons true
 set drawbox true
 set preview true
-#set previewer ~/.config/lf/preview
-#set cleaner ~/.config/lf/cleaner
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
 
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
