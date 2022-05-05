@@ -16,9 +16,9 @@ XF86Search
 super + shift + c
 	pkill -USR1 -x sxhkd
 
-# ranger
+# lfrun
 super + shift + f
-	st -e ranger
+	st -e lfrun
 
 # htop
 super + shift + p
@@ -26,7 +26,7 @@ super + shift + p
 
 # browser
 super + shift + Return
-	brave --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder
+	firefox
 
 # lock screen
 super + l
