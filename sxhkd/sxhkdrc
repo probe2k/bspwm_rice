@@ -34,7 +34,7 @@ super + l
 
 # suspend
 super + End
-	systemctl suspend
+	systemctl hibernate
 
 # display profiles
 super + p
