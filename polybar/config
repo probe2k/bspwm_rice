@@ -1,5 +1,5 @@
 [colors]
-background = #66000000
+background = #aa000000
 blue = #61afef
 nord = #81a1c1
 light_blue = #ADD8E6
@@ -22,6 +22,7 @@ width = 100%
 height = 20
 radius = 0.0
 border-size = 2
+border-color = #7bc5e4
 fixed-center = true
 enable-ipc = true
 background = ${colors.background}
