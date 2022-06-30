@@ -61,10 +61,10 @@ super + shift + @Print
 
 # volume
 XF86AudioRaiseVolume
-	amixer -q sset Master 10%+
+	pamixer -i 10
 
 XF86AudioLowerVolume
-	amixer -q sset Master 10%-
+	pamixer -d 10
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
