@@ -89,7 +89,7 @@ label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_07_00.6.analog-stereo
+#sink = alsa_output.pci-0000_07_00.6.analog-stereo
 use-ui-max = true
 interval = 5
 format-volume = <ramp-volume> <label-volume>
