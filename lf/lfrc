@@ -19,6 +19,7 @@ cmd mkwall ${{
 	cp "$f" /home/probe/.config/bspwm/wal.jpg && bspc wm -r
 }}
 
+map r reload
 map bG mkwall
 map bg wall_temp
 map D delete
