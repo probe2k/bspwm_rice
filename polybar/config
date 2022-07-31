@@ -18,12 +18,13 @@ screenchange-reload = true
 format-padding = 1
 
 [bar/example]
-width = 100%
+offset-y = 5
+offset-x = 1%
+width = 98%
 height = 20
-radius = 0.0
+radius = 10.0
 border-size = 2
-border-color = #7bc5e4
-fixed-center = true
+center = false
 enable-ipc = true
 background = ${colors.background}
 line-size = 2
