@@ -49,16 +49,16 @@ inline-mode = true
 format = <label-state>
 label-focused = 
 label-focused-foreground = ${colors.blue}
-label-focused-padding = 1
+label-focused-padding-right = 2
 label-occupied = 
 label-occupied-foreground = ${colors.gray}
-label-occupied-padding = 1
+label-occupied-padding-right = 2
 label-urgent = 
 label-urgent-foreground = ${colors.red}
-label-urgent-padding = 1
+label-urgent-padding-right = 2
 label-empty = 
 label-empty-foreground = ${colors.grey}
-label-empty-padding = 1
+label-empty-padding-right = 2
 
 [module/memory]
 type = custom/script
