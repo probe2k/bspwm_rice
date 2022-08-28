@@ -28,7 +28,7 @@ require('packer').startup(function(use)
 	use 'ap/vim-css-color'
 	use 'tpope/vim-fugitive'
 	use ('plasticboy/vim-markdown', {['for'] = 'markdown'})
-    use 'preservim/nerdtree'
+	use 'preservim/nerdtree'
 
 	require('lualine').setup{
 		options = {
