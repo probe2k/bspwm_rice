@@ -10,7 +10,8 @@ set history=100
 
 " Tabbing to 4
 set list
-set listchars=tab:\│\ 
+set listchars=tab:\▸\ ,eol:↴,trail:•,space:⋅
+set fillchars=diff:∙,fold:∙,horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┫,vertright:┣,verthoriz:╋
 set tabstop=4
 set shiftwidth=4
 
