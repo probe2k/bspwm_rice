@@ -1,0 +1,92 @@
+window:
+  dynamic_title: true
+  dimensions:
+    columns: 0
+    lines: 0
+
+  opacity: 0.7
+
+  position:
+    x: 0
+    y: 0
+
+  #startup_mode: SimpleFullscreen
+  #position:
+    #x: 0
+    #y: 0
+
+  padding:
+    x: 20
+    y: 20 
+
+  dynamic_padding: false
+  decorations: none
+
+scrolling:
+  history: 50000
+  multiplier: 3
+
+font:
+  normal:
+    family: Comic Mono
+    style: Normal
+
+  bold:
+    family: Comic Mono
+    style: Bold
+
+      #italic:
+      #family: SauceCodePro NF
+      #style: Bold Italic
+
+  size: 8.5
+
+    #offset:
+    #x: 0
+    #y: 3
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+draw_bold_text_with_bright_colors: true
+
+key_bindings:
+    - { key: C,        mods: Alt,           action: Copy                         }
+    - { key: V,        mods: Alt,           action: Paste                        }
+
+scheme: &tokyonight_night
+
+    primary:
+      background: '0x000000'
+      foreground: '0x00ffff'
+
+    # Normal colors
+    normal:
+      black:   '0x15161E'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xbb9af7'
+      cyan:    '0x7dcfff'
+      white:   '0xa9b1d6'
+
+    # Bright colors
+    bright:
+      black:   '0x414868'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xbb9af7'
+      cyan:    '0x7dcfff'
+      white:   '0xc0caf5'
+
+    indexed_colors:
+      - { index: 16, color: '0xff9e64' }
+      - { index: 17, color: '0xdb4b4b' }
+
+colors: *tokyonight_night
