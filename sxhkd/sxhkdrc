@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 # program launcher
 XF86Search
@@ -18,15 +18,15 @@ super + shift + c
 
 # lfrun
 super + shift + f
-	st -e lfrun
+	alacritty -e lfrun
 
 # htop
 super + shift + p
-	st -e htop
+	alacritty -e htop
 
 # browser
 super + shift + Return
-	firefox
+	brave --use-gl=desktop --enable-features=VaapiVideoDecoder,VaapiVideoEncoder
 
 # lock screen
 super + l
