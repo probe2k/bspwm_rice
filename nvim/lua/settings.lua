@@ -14,7 +14,7 @@ function M.config()
 	vim.cmd [[ set history=100 ]]
 	set.list = true
 	set.termguicolors = true
-	set.listchars = { tab = '│ ', eol = '↴', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
