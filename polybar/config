@@ -1,5 +1,5 @@
 [colors]
-background = #88000000
+background = #aa000000
 blue = #61afef
 nord = #81a1c1
 light_blue = #ADD8E6
@@ -27,7 +27,7 @@ border-size = 2
 center = false
 enable-ipc = true
 background = ${colors.background}
-line-size = 2
+line-size = 0
 padding-left = 0
 padding-right = 0
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=11;3
@@ -62,7 +62,7 @@ label-empty-padding-right = 2
 
 [module/memory]
 type = custom/script
-internal = 2
+interval = 2
 format-prefix = "﬙ "
 format-foreground = ${colors.green}
 exec = free -h | awk '/^Mem:/ { print $3 " / " $2 }'
@@ -108,6 +108,7 @@ ramp-volume-2 = 墳
 type = internal/battery
 battery = BAT0
 adapter = AC
+interval = 2
 format-full =  100%
 format-charging =  <label-charging>
 format-discharging =  <label-discharging>
