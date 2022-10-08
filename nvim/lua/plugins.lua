@@ -20,7 +20,7 @@ end
 
 require('packer').startup(function(use)
 	use { 'wbthomason/packer.nvim' }
-
+	use "rafamadriz/neon"
 	use 'nvim-lualine/lualine.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'akinsho/bufferline.nvim'
@@ -34,6 +34,12 @@ require('packer').startup(function(use)
 		options = {
 			component_separators = '',
 			section_separators = { left = '', right = '' },
+		}
+	}
+
+	require('lualine').setup {
+		options = {
+			theme = 'neon'
 		}
 	}
 
