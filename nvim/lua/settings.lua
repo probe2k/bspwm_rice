@@ -10,10 +10,13 @@ function M.config()
 	vim.cmd [[ set encoding=UTF-8 ]]
 	vim.cmd [[ set t_Co=256 ]]
 	vim.cmd [[ syntax enable ]]
-	vim.cmd [[ colorscheme moonlight ]]
 	vim.cmd [[ set history=100 ]]
+	vim.g.neon_style = "dark"
+	vim.g.neon_italic_keyword = true
+	vim.g.neon_italic_function = true
+	vim.g.neon_transparent = true
+	vim.cmd [[ colorscheme neon ]]
 	set.list = true
-	set.termguicolors = true
 	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 	set.fillchars = {
 		stl = ' ',
