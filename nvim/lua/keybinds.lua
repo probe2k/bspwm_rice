@@ -6,7 +6,7 @@ function M.keys()
 
 	vim.cmd [[ nnoremap <Tab> : bnext!<CR> ]]
 	vim.cmd [[ nnoremap <S-Tab> : bprevious!<CR> ]]
-	vim.cmd [[ nnoremap <C-Del> : bdelete<CR> ]]
+	vim.cmd [[ nnoremap <Del> : bdelete<CR> ]]
 	vim.cmd [[ nnoremap <S-Del> : bdelete!<CR> ]]
 	vim.cmd [[ nnoremap <C-n> : execute ":buffer ".(bufnr("%") + 1)<CR> ]]
 	vim.cmd [[ nnoremap <C-p> : execute ":buffer ".(bufnr("%") - 1)<CR> ]]

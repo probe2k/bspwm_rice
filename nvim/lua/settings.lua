@@ -12,13 +12,14 @@ function M.config()
 	vim.cmd [[ syntax enable ]]
 	vim.cmd [[ set history=100 ]]
 	vim.g.neon_style = "dark"
-	vim.g.neon_italic_keyword = true
-	vim.g.neon_italic_function = true
+	vim.g.neon_italic_keyword = false
+	vim.g.neon_italic_function = false
+	vim.g.neon_italic_comment = false
 	vim.g.neon_transparent = true
 	vim.cmd [[ colorscheme neon ]]
 	set.list = true
 	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
-	set.fillchars = {
+--[[	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
 		diff = '∙',
@@ -31,7 +32,7 @@ function M.config()
 		vertleft = '┫',
 		vertright = '┣',
 		verthoriz = '╋'
-	}
+	} ]]--
 	set.wrap = false
 	set.tabstop = 4
 	set.shiftwidth = 4
