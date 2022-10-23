@@ -18,8 +18,8 @@ function M.config()
 	vim.g.neon_transparent = true
 	vim.cmd [[ colorscheme neon ]]
 	set.list = true
-	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
---[[	set.fillchars = {
+	set.listchars = { tab = '  ', eol = '↲', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
 		diff = '∙',
@@ -32,7 +32,7 @@ function M.config()
 		vertleft = '┫',
 		vertright = '┣',
 		verthoriz = '╋'
-	} ]]--
+	}
 	set.wrap = false
 	set.tabstop = 4
 	set.shiftwidth = 4
