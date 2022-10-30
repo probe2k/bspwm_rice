@@ -1,5 +1,5 @@
 [colors]
-background = #aa000000
+background = #55000000
 blue = #61afef
 nord = #81a1c1
 light_blue = #ADD8E6
@@ -50,13 +50,13 @@ format = <label-state>
 label-focused = 
 label-focused-foreground = ${colors.blue}
 label-focused-padding-right = 2
-label-occupied = 
+label-occupied = 
 label-occupied-foreground = ${colors.gray}
 label-occupied-padding-right = 2
-label-urgent = 
+label-urgent = 
 label-urgent-foreground = ${colors.red}
 label-urgent-padding-right = 2
-label-empty = 
+label-empty = 
 label-empty-foreground = ${colors.grey}
 label-empty-padding-right = 2
 
@@ -108,7 +108,6 @@ ramp-volume-2 = 墳
 type = internal/battery
 battery = BAT0
 adapter = AC
-interval = 2
 format-full =  100%
 format-charging =  <label-charging>
 format-discharging =  <label-discharging>
