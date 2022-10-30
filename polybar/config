@@ -57,7 +57,7 @@ label-occupied-padding-right = 2
 label-urgent = 
 label-urgent-foreground = ${colors.red}
 label-urgent-padding-right = 2
-label-empty = 
+label-empty = 
 label-empty-foreground = ${colors.grey}
 label-empty-padding-right = 2
 
