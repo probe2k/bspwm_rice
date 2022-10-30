@@ -1,5 +1,5 @@
 [colors]
-background = #55000000
+background = #aa000000
 blue = #61afef
 nord = #81a1c1
 light_blue = #ADD8E6
@@ -12,6 +12,7 @@ yellow = #ECBE7B
 alert = #ff7f7f
 disc = #fadadd
 char = #98FB98
+poly = #00ffff
 
 [settings]
 screenchange-reload = true
@@ -48,12 +49,12 @@ pin-workspaces = true
 inline-mode = true
 format = <label-state>
 label-focused = 
-label-focused-foreground = ${colors.blue}
+label-focused-foreground = ${colors.poly}
 label-focused-padding-right = 2
 label-occupied = 
-label-occupied-foreground = ${colors.gray}
+label-occupied-foreground = ${colors.poly}
 label-occupied-padding-right = 2
-label-urgent = 
+label-urgent = 
 label-urgent-foreground = ${colors.red}
 label-urgent-padding-right = 2
 label-empty = 
