@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	st
 
 # program launcher
 XF86Search
@@ -18,11 +18,11 @@ super + shift + c
 
 # lfrun
 super + shift + f
-	alacritty -e lfrun
+	st -e lfrun
 
 # htop
 super + shift + p
-	alacritty -e htop
+	st -e htop
 
 # browser
 super + shift + Return
@@ -37,7 +37,7 @@ super + End
 	systemctl suspend
 
 # hibernate
-super + alt + End
+super + ctrl + End
 	systemctl hibernate
 
 # display profiles
@@ -87,10 +87,10 @@ XF86AudioPrev
 # brightness
 
 XF86MonBrightnessUp
-	xbacklight -inc 20
+	brightnessctl s +10%
 
 XF86MonBrightnessDown
-	xbacklight -dec 20
+	brightnessctl s 10%-
 
 #
 # bspwm hotkeys
