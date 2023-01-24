@@ -6,7 +6,11 @@
 
 # terminal emulator
 super + Return
-	st
+	kitty
+
+# make it black and white
+alt + shift + B
+	xrandr --output eDP-1 --set CTM '1431655765,0,1431655765,0,1431655765,0,1431655765,0,1431655765,0,1431655765,0,1431655765,0,1431655765,0,1431655765,0'
 
 # program launcher
 XF86Search
@@ -18,11 +22,11 @@ super + shift + c
 
 # lfrun
 super + shift + f
-	st -e lfrun
+	kitty -e lfrun
 
 # htop
 super + shift + p
-	st -e htop
+	kitty -e htop
 
 # browser
 super + shift + Return
