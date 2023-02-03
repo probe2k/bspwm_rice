@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+	st
 
 # make it black and white
 alt + shift + B
@@ -22,11 +22,11 @@ super + shift + c
 
 # lfrun
 super + shift + f
-	kitty -e lfrun
+	st -e lfrun
 
 # htop
 super + shift + p
-	kitty -e htop
+	st -e htop
 
 # browser
 super + shift + Return
