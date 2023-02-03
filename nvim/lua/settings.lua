@@ -16,7 +16,7 @@ function M.config()
 	vim.cmd [[ set clipboard+=unnamedplus ]]
 	vim.cmd [[ let g:python_recommended_style=0 ]]
 	vim.cmd [[ let g:NERDTreeWinPos=1 ]]
-	vim.cmd.colorscheme "moonlight"
+	vim.cmd.colorscheme "kanagawa"
 	set.relativenumber = true
 	set.number = true
 	set.ignorecase = true
@@ -26,7 +26,7 @@ function M.config()
 	set.shiftwidth = 4
 	set.termguicolors = true
 	set.list = true
-	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+	set.listchars = { tab = '│ ', eol = '↲', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
