@@ -15,7 +15,7 @@ local diff = {
 		removed = " ",
 	},
 	color = { bg = "#242735" },
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 local diagnostics = {
@@ -51,19 +51,19 @@ local vim_icons = {
 	function()
 		return ""
 	end,
-	separator = { left = "" },
+--	separator = { left = "" },
 }
 
 local modes = {
 	"mode",
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 local branch = {
 	"branch",
 	icon = "",
 	color = { bg = "#242735", fg = "#c296eb" },
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 function M.setup()
@@ -84,6 +84,7 @@ function M.setup()
 	require('packer').startup(function(use)
 		use { 'wbthomason/packer.nvim' }
 		use 'nvim-lualine/lualine.nvim'
+		use 'lewis6991/impatient.nvim'
 		use 'kyazdani42/nvim-web-devicons'
 		use 'akinsho/bufferline.nvim'
 		use 'ap/vim-css-color'
@@ -91,6 +92,7 @@ function M.setup()
 		use ('plasticboy/vim-markdown', {['for'] = 'markdown'})
 		use 'ryanoasis/vim-devicons'
 		use 'preservim/nerdtree'
+		use 'rebelot/kanagawa.nvim'
 		
 		require('lualine').setup {
 			options = {
@@ -124,7 +126,7 @@ function M.setup()
 							return ""
 						end,
 						color = { bg = "#8FCDA9", fg = "#121319" },
-						separator = { left = "", right = "" },
+--						separator = { left = "", right = "" },
 					},
 					diagnostics,
 				},
@@ -133,7 +135,7 @@ function M.setup()
 						function()
 							return ""
 						end,
-						separator = { left = "", right = "" },
+--						separator = { left = "", right = "" },
 						color = { bg = "#C296EB", fg = "#000000" },
 					},
 					"progress",
@@ -141,7 +143,7 @@ function M.setup()
 						function()
 							return ""
 						end,
-						separator = { left = "", right = "" },
+--						separator = { left = "", right = "" },
 						color = { bg = "#ECD3A0", fg = "#000000" },
 					},
 					{
@@ -151,7 +153,7 @@ function M.setup()
 						function()
 							return ""
 						end,
-						separator = { left = "", right = "" },
+--						separator = { left = "", right = "" },
 						color = { bg = "#86AAEC", fg = "#000000" },
 					},
 				},
@@ -163,7 +165,7 @@ function M.setup()
 		require('bufferline').setup {
 			options = {
 				indicator = {
-					icon = '│',
+					icon = '',
 					style = 'icon',
 				},
 				modified_icon = '●',
@@ -172,16 +174,8 @@ function M.setup()
 				right_trunc_marker = '',
 				separator_style = 'thin',
 			},
-			highlights = {
-				buffer_selected = { italic = false },
-				diagnostic_selected = { italic = false },
-				hint_selected = { italic = false },
-				pick_selected = { italic = false },
-				pick_visible = { italic = false },
-				pick = { italic = false },
-			},
 		}
-
+		
 		if Packer_bootstrap then
 			require('packer').sync()
 		end
