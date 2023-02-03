@@ -15,7 +15,7 @@ local diff = {
 		removed = " ",
 	},
 	color = { bg = "#242735" },
---	separator = { left = "", right = "" },
+	separator = { left = "", right = "" },
 }
 
 local diagnostics = {
@@ -51,19 +51,19 @@ local vim_icons = {
 	function()
 		return ""
 	end,
---	separator = { left = "" },
+	separator = { left = "" },
 }
 
 local modes = {
 	"mode",
---	separator = { left = "", right = "" },
+	separator = { left = "", right = "" },
 }
 
 local branch = {
 	"branch",
 	icon = "",
 	color = { bg = "#242735", fg = "#c296eb" },
---	separator = { left = "", right = "" },
+	separator = { left = "", right = "" },
 }
 
 function M.setup()
@@ -92,8 +92,8 @@ function M.setup()
 		use ('plasticboy/vim-markdown', {['for'] = 'markdown'})
 		use 'ryanoasis/vim-devicons'
 		use 'preservim/nerdtree'
-		use 'rebelot/kanagawa.nvim'
-		
+		use 'folke/tokyonight.nvim'
+
 		require('lualine').setup {
 			options = {
 				globalstatus = true,
@@ -126,7 +126,7 @@ function M.setup()
 							return ""
 						end,
 						color = { bg = "#8FCDA9", fg = "#121319" },
---						separator = { left = "", right = "" },
+						separator = { left = "", right = "" },
 					},
 					diagnostics,
 				},
@@ -135,7 +135,7 @@ function M.setup()
 						function()
 							return ""
 						end,
---						separator = { left = "", right = "" },
+						separator = { left = "", right = "" },
 						color = { bg = "#C296EB", fg = "#000000" },
 					},
 					"progress",
@@ -143,7 +143,7 @@ function M.setup()
 						function()
 							return ""
 						end,
---						separator = { left = "", right = "" },
+						separator = { left = "", right = "" },
 						color = { bg = "#ECD3A0", fg = "#000000" },
 					},
 					{
@@ -153,7 +153,7 @@ function M.setup()
 						function()
 							return ""
 						end,
---						separator = { left = "", right = "" },
+						separator = { left = "", right = "" },
 						color = { bg = "#86AAEC", fg = "#000000" },
 					},
 				},

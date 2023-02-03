@@ -16,7 +16,7 @@ function M.config()
 	vim.cmd [[ set clipboard+=unnamedplus ]]
 	vim.cmd [[ let g:python_recommended_style=0 ]]
 	vim.cmd [[ let g:NERDTreeWinPos=1 ]]
-	vim.cmd.colorscheme "kanagawa"
+	vim.cmd.colorscheme "tokyonight-night"
 	set.relativenumber = true
 	set.number = true
 	set.ignorecase = true
