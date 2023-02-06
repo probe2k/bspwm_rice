@@ -72,6 +72,9 @@ function M.setup()
 		-- Add git integrations
 		use("lewis6991/gitsigns.nvim")
 
+		-- Load nvim lua modules faster
+		use 'lewis6991/impatient.nvim'
+
 		if Packer_bootstrap then
 			require('packer').sync()
 		end
