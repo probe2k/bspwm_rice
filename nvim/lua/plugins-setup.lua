@@ -73,7 +73,10 @@ function M.setup()
 		use("lewis6991/gitsigns.nvim")
 
 		-- Load nvim lua modules faster
-		use 'lewis6991/impatient.nvim'
+		use("lewis6991/impatient.nvim")
+
+		-- Add indent-line
+		use("lukas-reineke/indent-blankline.nvim")
 
 		if Packer_bootstrap then
 			require('packer').sync()
