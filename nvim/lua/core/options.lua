@@ -29,7 +29,7 @@ function M.config()
 
 	-- setup lcs
 	set.list = true
-	set.listchars = { tab = '│ ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+	set.listchars = { tab = '  ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
@@ -68,6 +68,7 @@ function M.config()
 	vim.cmd [[ set splitright splitbelow ]]
 
 	-- miscellaneous
+	vim.cmd [[ let g:rust_recommended_style = 0 ]]
 	vim.cmd [[ let g:python_recommended_style=0 ]]
 	vim.cmd [[ let g:NERDTreeWinPos=1 ]]
 
