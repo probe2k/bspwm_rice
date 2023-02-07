@@ -25,10 +25,10 @@ local diagnostics = {
 		"hint",
 	},
 	symbols = {
-		error = " ",
+		error = "ﮊ ",
 		warn = " ",
 		hint = " ",
-		info = " ",
+		info = " ",
 	},
 	colored = true,
 	always_visible = false,
@@ -131,7 +131,7 @@ local modes = {
 
 local branch = {
 	"branch",
-	icon = "",
+	icon = "",
 	separator = { left = "", right = "" },
 	{
 		function ()
