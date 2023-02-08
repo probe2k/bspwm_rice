@@ -21,6 +21,8 @@ function M.keys()
 	vim.cmd [[ nnoremap <A-Down> <C-W><C-+> ]]
 	vim.cmd [[ nnoremap <A-Up> <C-W><C--> ]]
 	vim.cmd [[ nnoremap \ :noh<return> ]]
+	vim.cmd [[ nnoremap "<C-d>" : "<C-d>zz" ]]
+	vim.cmd [[ nnoremap "<C-u>" : "<C-u>zz" ]]
 
 end
 
