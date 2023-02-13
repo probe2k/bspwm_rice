@@ -18,7 +18,7 @@ function M.config()
 			"bashls",
 			"clangd",
 			"emmet_ls",
-			"golangci_lint_ls",
+			"gopls",
 			"jdtls",
 			"sumneko_lua",
 			"marksman",
