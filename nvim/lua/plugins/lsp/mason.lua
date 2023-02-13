@@ -24,6 +24,7 @@ function M.config()
 			"marksman",
 			"pyright",
 			"rust_analyzer",
+			"solidity"
 		},
 	})
 end

@@ -37,7 +37,7 @@ function M.config()
 
 	lspconfig["emmet_ls"].setup({
 		capabilities = capabilities,
-		on_attach = on_attach
+		on_attach = on_attach,
 	})
 
 	lspconfig["sumneko_lua"].setup({
@@ -91,6 +91,14 @@ function M.config()
 	lspconfig["rust_analyzer"].setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
+	})
+
+	lspconfig["solidity"].setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		root_dir = function()
+			return vim.fn.getcwd()
+		end,
 	})
 
 	local signs = { Error = "ﮊ ", Warn = " ", Hint = " ", Info = " " }
