@@ -31,6 +31,8 @@ function M.config()
 			"gosum",
 			"python",
 			"rust",
+			"markdown",
+			"markdown_inline",
 		},
 		auto_install = true,
 	})
