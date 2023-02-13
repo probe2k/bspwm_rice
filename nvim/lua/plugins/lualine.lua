@@ -165,7 +165,7 @@ function M.config()
 				{
 					"filetype",
 					icon_only = true,
-					colroed = false,
+					colored = false,
 					padding = 1,
 					color = { bg = "#2a2c3f" }
 				},
