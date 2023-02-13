@@ -71,6 +71,9 @@ function M.config()
 	lspconfig["golangci_lint_ls"].setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
+		root_dir = function()
+			return vim.fn.getcwd()
+		end,
 	})
 
 	lspconfig["jdtls"].setup({
