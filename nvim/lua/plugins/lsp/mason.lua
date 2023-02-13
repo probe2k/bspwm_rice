@@ -20,7 +20,7 @@ function M.config()
 			"emmet_ls",
 			"gopls",
 			"jdtls",
-			"sumneko_lua",
+			"lua_ls",
 			"marksman",
 			"pyright",
 			"rust_analyzer",
