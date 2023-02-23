@@ -6,6 +6,9 @@ function M.config()
 		print("Colorscheme not found")
 		return
 	end
+
+	vim.cmd [[ hi NonText ctermbg=none ]]
+	vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
 end
 
 return M
