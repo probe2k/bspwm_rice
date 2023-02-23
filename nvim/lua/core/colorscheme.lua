@@ -9,6 +9,7 @@ function M.config()
 
 	vim.cmd [[ hi NonText ctermbg=none ]]
 	vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+	vim.cmd [[ hi SignColumn guibg=NONE ]]
 end
 
 return M
