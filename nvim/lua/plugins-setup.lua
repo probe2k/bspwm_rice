@@ -26,7 +26,10 @@ function M.setup()
 		use("folke/tokyonight.nvim")
 
 		-- File explorer
-		use("preservim/nerdtree")
+		use {
+			"nvim-tree/nvim-tree.lua",
+			tag = "nightly"
+		}
 
 		-- Icons for NERDTree and Bufferline
 		use("ryanoasis/vim-devicons")
@@ -71,9 +74,6 @@ function M.setup()
 
 		-- Add git integrations
 		use("lewis6991/gitsigns.nvim")
-
-		-- Load nvim lua modules faster
-		use("lewis6991/impatient.nvim")
 
 		-- Add indent-line
 		use("lukas-reineke/indent-blankline.nvim")
