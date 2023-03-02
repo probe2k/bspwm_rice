@@ -11,7 +11,7 @@ function M.keys()
 	vim.cmd [[ nnoremap <C-n> : execute ":buffer ".(bufnr("%") + 1)<CR> ]]
 	vim.cmd [[ nnoremap <C-p> : execute ":buffer ".(bufnr("%") - 1)<CR> ]]
 	vim.cmd [[ nnoremap <C-a> : badd ]]
-	vim.cmd [[ nnoremap <C-z> : NERDTreeToggle<CR> ]]
+	vim.cmd [[ nnoremap <C-z> : NvimTreeToggle<CR> ]]
 	vim.cmd [[ nnoremap <C-Down> <C-W><C-J> ]]
 	vim.cmd [[ nnoremap <C-Up> <C-W><C-K> ]]
 	vim.cmd [[ nnoremap <C-Right> <C-W><C-L> ]]
