@@ -76,6 +76,9 @@ function M.config()
 	lspconfig["jdtls"].setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
+		root_dir = function()
+			return vim.fn.getcwd()
+		end,
 	})
 
 	lspconfig["marksman"].setup({
@@ -99,6 +102,11 @@ function M.config()
 		root_dir = function()
 			return vim.fn.getcwd()
 		end,
+	})
+
+	lspconfig["tsserver"].setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
 	})
 
 	local signs = { Error = "ﮊ ", Warn = " ", Hint = " ", Info = " " }

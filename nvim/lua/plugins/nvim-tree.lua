@@ -9,6 +9,8 @@ function M.config()
 	local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 	local list = {
 		{ key = "=", cb = tree_cb("cd") },
+		{ key = "v", cb = tree_cb("vsplit") },
+		{ key = "s", cb = tree_cb("split") },
 	}
 
 	nvimtree.setup({
