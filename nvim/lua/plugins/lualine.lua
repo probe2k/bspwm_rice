@@ -8,11 +8,11 @@ local diff = {
 	"diff",
 	colored = true,
 	symbols = {
-		added = " ",
-		modified = " ",
-		removed = " ",
+		added = " ",
+		modified = " ",
+		removed = " ",
 	},
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 local diagnostics = {
@@ -119,20 +119,20 @@ end
 
 local custom_icons = {
 	function()
-		return ""
+		return ""
 	end,
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 local modes = {
 	"mode",
-	separator = { left = "", right = "" },
+--	separator = { left = "", right = "" },
 }
 
 local branch = {
 	"branch",
-	icon = "",
-	separator = { left = "", right = "" },
+	icon = "",
+--	separator = { left = "", right = "" },
 	{
 		function ()
 			return " "
@@ -158,7 +158,7 @@ function M.config()
 		},
 		sections = {
 			lualine_a = {
-				custom_icons,
+--				custom_icons,
 				modes,
 			},
 			lualine_b = {
@@ -172,7 +172,7 @@ function M.config()
 				{
 					"filename",
 					padding = 1,
-					separator = { left = "", right = "" },
+--					separator = { left = "", right = "" },
 					color = { bg = "#2a2c3f"}
 				},
 			},
@@ -187,9 +187,9 @@ function M.config()
 				},
 				{
 					function()
-						return ""
+						return ""
 					end,
-					separator = { left = "", right = "" },
+--					separator = { left = "", right = "" },
 					color = { bg = "#8FBCBB", fg = "#000000" },
 				},
 				"progress",
@@ -197,7 +197,7 @@ function M.config()
 					function()
 						return ""
 					end,
-					separator = { left = "", right = "" },
+--					separator = { left = "", right = "" },
 					color = { bg = "#ECD3A0", fg = "#000000" },
 				},
 				{
@@ -207,7 +207,7 @@ function M.config()
 					function()
 						return ""
 					end,
-					separator = { left = "", right = "" },
+--					separator = { left = "", right = "" },
 					color = { bg = "#86AAEC", fg = "#000000" },
 				},
 			},
