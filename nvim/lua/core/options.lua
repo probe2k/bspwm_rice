@@ -27,9 +27,12 @@ function M.config()
 	-- configure clipboard
 	set.clipboard:append("unnamedplus")
 
+	-- reload on changed buffer
+	set.autoread = true
+
 	-- setup lcs
 	set.list = true
-	set.listchars = { tab = '  ', eol = '↩', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+	set.listchars = { tab = '  ', eol = '↲', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 	set.fillchars = {
 		stl = ' ',
 		stlnc = ' ',
@@ -70,7 +73,6 @@ function M.config()
 	-- miscellaneous
 	vim.cmd [[ let g:rust_recommended_style=0 ]]
 	vim.cmd [[ let g:python_recommended_style=0 ]]
-	vim.cmd [[ let g:NERDTreeWinPos=1 ]]
 
 end
 
