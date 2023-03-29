@@ -3,6 +3,7 @@ local vim = vim
 local M = {}
 
 function M.keys()
+	vim.g.mapleader = ' '
 
 	vim.cmd [[ nnoremap <Tab> : bnext!<CR> ]]
 	vim.cmd [[ nnoremap <S-Tab> : bprevious!<CR> ]]
