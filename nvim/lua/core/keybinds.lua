@@ -24,6 +24,8 @@ function M.keys()
 	vim.cmd [[ nnoremap \ :noh<return> ]]
 	vim.cmd [[ nnoremap "<C-d>" : "<C-d>zz" ]]
 	vim.cmd [[ nnoremap "<C-u>" : "<C-u>zz" ]]
+	vim.cmd [[ nnoremap <A-f> : "<cmd>Telescope find_files<CR>" ]]
+	vim.cmd [[ nnoremap <A-b> : "<cmd>Telescope buffers<CR>" ]]
 
 end
 

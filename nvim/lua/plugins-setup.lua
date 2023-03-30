@@ -78,6 +78,10 @@ function M.setup()
 		-- Add indent-line
 		use("lukas-reineke/indent-blankline.nvim")
 
+		-- setup telescope
+		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+		use({ "nvim-telescope/telescope.nvim", branch = "0.1.x", requires = { {'nvim-lua/plenary.nvim'} } })
+
 		if Packer_bootstrap then
 			require('packer').sync()
 		end
