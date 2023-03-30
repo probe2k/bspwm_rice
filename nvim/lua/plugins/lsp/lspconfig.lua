@@ -18,8 +18,9 @@ function M.config()
 		local opts = { noremap = true, silent = true, buffer = bufnr }
 
 		-- set keybinds
-		keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
-		keymap.set("n", "<leader>f", "<cmd>Lspsaga code_action<CR>", opts)
+		keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+		keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts)
+		keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 		keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
 		keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 		keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
