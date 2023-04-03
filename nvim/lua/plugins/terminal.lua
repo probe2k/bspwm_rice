@@ -7,7 +7,6 @@ function M.config()
 	end
 
 	toggleterm.setup({
-		size = 20,
 		open_mapping = [[<C-\>]],
 		hide_numbers = true,
 		shade_filetypes = {},
@@ -20,6 +19,12 @@ function M.config()
 		close_on_exit= true,
 		shell = vim.o.shell,
 		float_opts = {
+			width = function()
+				return math.ceil(vim.o.columns * 0.6)
+			end,
+			height = function()
+				return math.ceil(vim.o.lines * 0.7)
+			end,
 			border = "curved",
 			winblend = 0,
 			highlights = {
