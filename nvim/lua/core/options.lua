@@ -30,6 +30,9 @@ function M.config()
 	-- reload on changed buffer
 	set.autoread = true
 
+	-- set cmdheight to 0
+	set.cmdheight = 0
+
 	-- setup lcs
 	set.list = true
 	set.listchars = { tab = '  ', eol = '↲', trail = '•', space = '⋅', precedes = '←', extends = '→' }
