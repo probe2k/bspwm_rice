@@ -33,7 +33,7 @@ super + shift + Return
 	firefox
 
 # lock screen
-super + ctrl + l
+mod1 + l
 	/home/probe/.config/scripts/lock.sh
 
 # suspend
