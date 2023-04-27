@@ -23,8 +23,6 @@ function M.config()
 			"lua_ls",
 			"marksman",
 			"pyright",
-			"rust_analyzer",
-			"solidity",
 			"tsserver"
 		},
 	})

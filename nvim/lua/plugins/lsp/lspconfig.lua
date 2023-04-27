@@ -87,11 +87,6 @@ function M.config()
 		on_attach = on_attach,
 	})
 
-	lspconfig["rust_analyzer"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-
 	lspconfig["tsserver"].setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
