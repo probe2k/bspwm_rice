@@ -75,6 +75,9 @@ function M.config()
 
 	-- miscellaneous
 	vim.cmd [[ let g:python_recommended_style=0 ]]
+	vim.cmd [[ let g:loaded_node_provider=0 ]]
+	vim.cmd [[ let g:loaded_python3_provider=0 ]]
+	vim.cmd [[ let g:loaded_perl_provider=0 ]]
 
 end
 
