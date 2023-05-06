@@ -23,69 +23,72 @@ function M.setup()
 		use("wbthomason/packer.nvim")
 
 		-- Colorscheme tokyonight
-		use("folke/tokyonight.nvim")
+		use {"folke/tokyonight.nvim", config = "require('core.colorscheme').config()"}
 
-		-- File explorer
+		-- Managing and installing lsp servers
+		use("williamboman/mason.nvim")
+		use("williamboman/mason-lspconfig.nvim")
+
+		-- Configure treesitter
 		use {
-			"nvim-tree/nvim-tree.lua",
-			tag = "nightly"
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+			event = "BufWinEnter",
+			config = "require('plugins.treesitter').config()"
 		}
 
 		-- Icons for NERDTree and Bufferline
 		use("ryanoasis/vim-devicons")
 		use("kyazdani42/nvim-web-devicons")
 
-		-- Buffer indicator
-		use 'akinsho/bufferline.nvim'
-
 		-- Statusline
-		use("nvim-lualine/lualine.nvim")
+		use {"nvim-lualine/lualine.nvim", event = "BufWinEnter", config = "require('plugins.lualine').config()"}
 
-		-- Auto-completion
-		use("hrsh7th/nvim-cmp")
-		use("hrsh7th/cmp-buffer")
-		use("hrsh7th/cmp-path")
+		-- Buffer indicator
+		use {'akinsho/bufferline.nvim', event = "BufWinEnter", config = "require('plugins.bufferline').config()"}
 
-		-- Snippets
-		use("L3MON4D3/LuaSnip")
-		use("saadparwaiz1/cmp_luasnip")
-		use("rafamadriz/friendly-snippets")
-
-		-- Managing and installing lsp servers
-		use("williamboman/mason.nvim")
-		use("williamboman/mason-lspconfig.nvim")
+		-- File explorer
+		use {
+			"nvim-tree/nvim-tree.lua",
+			tag = "nightly",
+			cmd = "NvimTreeToggle",
+			config = "require('plugins.nvim-tree').config()"
+		}
 
 		-- Configure lsp servers
-		use("neovim/nvim-lspconfig")
-		use("hrsh7th/cmp-nvim-lsp")
-		use({ "glepnir/lspsaga.nvim", branch = "main" })
-		use("onsails/lspkind.nvim")
+		use {"neovim/nvim-lspconfig"}
+		use {"hrsh7th/cmp-nvim-lsp"}
+		use { "glepnir/lspsaga.nvim", branch = "main"}
+		use {"onsails/lspkind.nvim"}
 
-		-- Configure treesitter
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			run = function()
-				require("nvim-treesitter.install").update({ with_sync = true })
-			end,
-		})
+		-- Auto-completion
+		use {"hrsh7th/nvim-cmp"}
+		use {"hrsh7th/cmp-buffer"}
+		use {"hrsh7th/cmp-path"}
+
+		-- Snippets
+		use {"L3MON4D3/LuaSnip"}
+		use {"saadparwaiz1/cmp_luasnip"}
+		use {"rafamadriz/friendly-snippets"}
 
 		-- Configure auto closing
-		use("windwp/nvim-autopairs")
-
-		-- Add git integrations
-		use("lewis6991/gitsigns.nvim")
-
-		-- Add indent-line
-		use("lukas-reineke/indent-blankline.nvim")
+		use {"windwp/nvim-autopairs"}
 
 		-- Setup telescope
-		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+		use { "nvim-telescope/telescope-fzf-native.nvim", run = "make", config = "require('plugins.telescope').config()" }
 		use({ "nvim-telescope/telescope.nvim", branch = "0.1.x", requires = { {'nvim-lua/plenary.nvim'} } })
+
+		-- Add git integrations
+		use {"lewis6991/gitsigns.nvim", config = "require('plugins.gitsigns').config()"}
+
+		-- Add indent-line
+		use {"lukas-reineke/indent-blankline.nvim", event = "BufRead", config = "require('plugins.indent-blankline').config()"}
 
 		-- Configure terminal inside neovim
 		use {
 			'akinsho/toggleterm.nvim',
-			tag = "*"
+			tag = "*",
+			config = "require('plugins.terminal').config()"
 		}
 
 		if Packer_bootstrap then
