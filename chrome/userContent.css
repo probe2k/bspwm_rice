@@ -116,6 +116,9 @@
 
 @-moz-document url("about:home"),
 url("about:newtab") {
+	body {
+		background-color: #1c1b22 !important;
+	}
   .search-wrapper .search-handoff-button .fake-caret {
     top: 13px !important;
     inset-inline-start: 48px !important;
