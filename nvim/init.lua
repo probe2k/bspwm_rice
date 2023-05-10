@@ -1,3 +1,4 @@
+vim.loader.enable()
 require('plugins-setup').setup()
 require('core.keybinds').keys()
 require('core.options').config()
