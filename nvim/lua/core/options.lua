@@ -27,6 +27,12 @@ function M.config()
 	-- configure clipboard
 	set.clipboard:append("unnamedplus")
 
+	-- disable nvim intro
+	set.shortmess:append "sI"
+
+	-- enable navigate to new line using hl
+	set.whichwrap:append "<>[]hl"
+
 	-- reload on changed buffer
 	set.autoread = true
 
@@ -74,10 +80,9 @@ function M.config()
 	vim.cmd [[ set splitright splitbelow ]]
 
 	-- miscellaneous
-	vim.cmd [[ let g:python_recommended_style=0 ]]
-	vim.cmd [[ let g:loaded_node_provider=0 ]]
-	vim.cmd [[ let g:loaded_python3_provider=0 ]]
-	vim.cmd [[ let g:loaded_perl_provider=0 ]]
+	for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
+		vim.g["loaded_" .. provider .. "_provider"] = 0
+	end
 
 end
 

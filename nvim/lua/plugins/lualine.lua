@@ -12,7 +12,6 @@ local diff = {
 		modified = " ",
 		removed = " ",
 	},
---	separator = { left = "", right = "" },
 }
 
 local diagnostics = {
@@ -121,18 +120,17 @@ local custom_icons = {
 	function()
 		return ""
 	end,
---	separator = { left = "", right = "" },
+	separator = { left = "", right = "" },
 }
 
 local modes = {
 	"mode",
---	separator = { left = "", right = "" },
+	separator = { left = "", right = "" },
 }
 
 local branch = {
 	"branch",
 	icon = "",
---	separator = { left = "", right = "" },
 	{
 		function ()
 			return " "
@@ -172,7 +170,7 @@ function M.config()
 				{
 					"filename",
 					padding = 1,
---					separator = { left = "", right = "" },
+					separator = { left = "", right = "" },
 					color = { bg = "#2a2c3f"}
 				},
 			},
@@ -187,9 +185,9 @@ function M.config()
 				},
 				{
 					function()
-						return ""
+						return " "
 					end,
---					separator = { left = "", right = "" },
+					separator = { left = "", right = "" },
 					color = { bg = "#8FBCBB", fg = "#000000" },
 				},
 				"progress",
@@ -197,7 +195,7 @@ function M.config()
 					function()
 						return ""
 					end,
---					separator = { left = "", right = "" },
+					separator = { left = "", right = "" },
 					color = { bg = "#ECD3A0", fg = "#000000" },
 				},
 				{
@@ -207,7 +205,7 @@ function M.config()
 					function()
 						return ""
 					end,
---					separator = { left = "", right = "" },
+					separator = { left = "", right = "" },
 					color = { bg = "#86AAEC", fg = "#000000" },
 				},
 			},
