@@ -4,7 +4,7 @@
 # Configure executable permission - user access for dmenu `chmod + x`
 
 # Internal display config -- get from "xrandr | grep \ connected"
-IN_SIG="eDP1"
+IN_SIG="eDP-1"
 
 # Display choices in dmenu for setup
 choices="Internal\nDualSetup\nExternal\nClone"
@@ -13,12 +13,12 @@ choices="Internal\nDualSetup\nExternal\nClone"
 chosen=$(echo $choices | dmenu)
 
 # Signal classification based on port directive
-if [ `xrandr | grep DP1 | grep -c ' connected '` -eq 1 ]; then
-	EX_SIG="DP1"
-elif [ `xrandr | grep HDMI1 | grep -c ' connected '` -eq 1 ]; then
-	EX_SIG="HDMI1"
-elif [ `xrandr | grep HDMI2 | grep -c ' connected '` -eq 1 ]; then
-	EX_SIG="HDMI2"
+if [ `xrandr | grep DP-1 | grep -c ' connected '` -eq 1 ]; then
+	EX_SIG="DP-1"
+elif [ `xrandr | grep HDMI-1 | grep -c ' connected '` -eq 1 ]; then
+	EX_SIG="HDMI-1"
+elif [ `xrandr | grep HDMI-2 | grep -c ' connected '` -eq 1 ]; then
+	EX_SIG="HDMI-2"
 elif [ `xrandr | grep VIRTUAL1 | grep -c ' connected '` -eq 1 ]; then
 	EX_SIG="VIRTUAL1"
 fi
