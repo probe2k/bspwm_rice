@@ -17,6 +17,7 @@ function M.config()
 		sort_by = "case_sensitive",
 		disable_netrw = true,
 		hijack_netrw = true,
+		hijack_cursor = true,
 		update_cwd = true,
 		update_focused_file = {
 			enable = true,
