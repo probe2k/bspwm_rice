@@ -13,6 +13,7 @@ function M.config()
 			return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 		end
 
+		vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
 		vim.keymap.set('n', '-', api.tree.change_root_to_parent, opts('Up'))
 		vim.keymap.set('n', '=', api.tree.change_root_to_node, opts('CD'))
 		vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
@@ -31,9 +32,6 @@ function M.config()
 			update_cwd = false,
 		},
 		view = {
-			mappings = {
-				list = list
-			},
 			adaptive_size = false,
 			side = 'right',
 			width = 30,
