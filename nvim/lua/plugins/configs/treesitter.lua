@@ -12,6 +12,7 @@ function M.config()
 		ensure_installed = {
 			"json",
 			"javascript",
+			"java",
 			"yaml",
 			"html",
 			"css",

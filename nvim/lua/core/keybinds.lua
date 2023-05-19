@@ -1,32 +1,24 @@
-local vim = vim
+local map = vim.keymap.set
 
-local M = {}
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-function M.keys()
-	vim.g.mapleader = ' '
-
-	vim.cmd [[ nnoremap <Tab> : bnext!<CR> ]]
-	vim.cmd [[ nnoremap <S-Tab> : bprevious!<CR> ]]
-	vim.cmd [[ nnoremap <Del> : bdelete<CR> ]]
-	vim.cmd [[ nnoremap <S-Del> : bdelete!<CR> ]]
-	vim.cmd [[ nnoremap <C-n> : execute ":buffer ".(bufnr("%") + 1)<CR> ]]
-	vim.cmd [[ nnoremap <C-p> : execute ":buffer ".(bufnr("%") - 1)<CR> ]]
-	vim.cmd [[ nnoremap <C-a> : badd ]]
-	vim.cmd [[ nnoremap <C-z> : NvimTreeToggle<CR> ]]
-	vim.cmd [[ nnoremap <C-j> <C-W><C-J> ]]
-	vim.cmd [[ nnoremap <C-k> <C-W><C-K> ]]
-	vim.cmd [[ nnoremap <C-l> <C-W><C-L> ]]
-	vim.cmd [[ nnoremap <C-h> <C-W><C-H> ]]
-	vim.cmd [[ nnoremap <A--> <C-W><C-<> ]]
-	vim.cmd [[ nnoremap <A-=> <C-W><C->> ]]
-	vim.cmd [[ nnoremap <A-Down> <C-W><C-+> ]]
-	vim.cmd [[ nnoremap <A-Up> <C-W><C--> ]]
-	vim.cmd [[ nnoremap \ :noh<return> ]]
-	vim.cmd [[ nnoremap "<C-d>" : "<C-d>zz" ]]
-	vim.cmd [[ nnoremap "<C-u>" : "<C-u>zz" ]]
-	vim.cmd [[ nnoremap <A-f> : "<cmd>Telescope find_files<CR>" ]]
-	vim.cmd [[ nnoremap <A-b> : "<cmd>Telescope buffers<CR>" ]]
-
-end
-
-return M
+map("n", "<Tab>", ":bnext!<CR>", { desc = "Next buffer" })
+map("n", "<S-Tab>", ":bprevious!<CR>", { desc = "Previous buffer" })
+map("n", "<Del>", ":bdelete<CR>", { desc = "Delete buffer" })
+map("n", "<S-Del>", ":bdelete!<CR>", { desc = "Force delete buffer" })
+map("n", "<C-a>", ":badd <CR>", { desc = "Add buffer" })
+map("n", "<C-z>", ":NvimTreeToggle<CR>", { desc = "Next buffer" })
+map("n", "<C-j>", "<C-W><C-J>", { desc = "Down Window" })
+map("n", "<C-k>", "<C-W><C-K>", { desc = "Up Window" })
+map("n", "<C-l>", "<C-W><C-L>", { desc = "Right Window" })
+map("n", "<C-h>", "<C-W><C-H>", { desc = "Left Window" })
+map("n", "<A-->", "<C-W><C-<>", { desc = "Resize Small" })
+map("n", "<A-=>", "<C-W><C->>", { desc = "Resize Large" })
+map("n", "<A-Down>", "<C-W><C-+>", { desc = "Resize Down" })
+map("n", "<A-Up>", "<C-W><C-->", { desc = "Resize Up" })
+map("n", "\\", ":noh<CR>", { desc = "Clear Selection" })
+map("n", "<C-d>", "<C-d>zz", { desc = "Center down" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Center up" })
+map("n", "<A-f>", ":Telescope find_files<CR>", { desc = "Telescope File Finder" })
+map("n", "<A-b>", ":Telescope buffers<CR>", { desc = "Telescope Buffer Finder" })

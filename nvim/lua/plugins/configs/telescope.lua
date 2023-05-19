@@ -14,7 +14,7 @@ function M.config()
 	telescope.setup({
 		defaults = {
 			prompt_prefix = "   ",
-			selection_caret = "󱓞 ",
+			selection_caret = "➦ ",
 			mappings = {
 				i = {
 					["<esc>"] = actions.close,
@@ -35,15 +35,8 @@ function M.config()
 				height = 0.80,
 				preview_cutoff = 120,
 			},
-			winblend = 0,
-			border = {},
-			borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-			color_devicons = true,
-			set_env = { ["COLORTERM"] = "truecolor" },
 		}
 	})
-
-	telescope.load_extension("fzf")
 end
 
 return M

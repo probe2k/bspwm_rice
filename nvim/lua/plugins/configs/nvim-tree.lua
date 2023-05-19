@@ -6,12 +6,18 @@ function M.config()
 		return
 	end
 
-	local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-	local list = {
-		{ key = "=", cb = tree_cb("cd") },
-		{ key = "v", cb = tree_cb("vsplit") },
-		{ key = "s", cb = tree_cb("split") },
-	}
+	local function on_attach(bufnr)
+		local api = require('nvim-tree.api')
+
+		local function opts(desc)
+			return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+		end
+
+		vim.keymap.set('n', '-', api.tree.change_root_to_parent, opts('Up'))
+		vim.keymap.set('n', '=', api.tree.change_root_to_node, opts('CD'))
+		vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+		vim.keymap.set('n', 's', api.node.open.horizontal, opts('Open: Horizontal Split'))
+	end
 
 	nvimtree.setup({
 		sort_by = "case_sensitive",
@@ -19,6 +25,7 @@ function M.config()
 		hijack_netrw = true,
 		hijack_cursor = true,
 		update_cwd = true,
+		on_attach = on_attach,
 		update_focused_file = {
 			enable = true,
 			update_cwd = false,

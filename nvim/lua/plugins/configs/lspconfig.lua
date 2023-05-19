@@ -15,26 +15,23 @@ function M.config()
 
 	-- enable keybinds for available lsp server
 	local on_attach = function(client, bufnr)
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.documentRangeFormattingProvider = false
+
 		local opts = { noremap = true, silent = true, buffer = bufnr }
 
 		-- set keybinds
 		keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 		keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts)
 		keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
-		keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
-		keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+		keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 		keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 		keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 		keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 	end
 
 	-- enable autocompletion
-	local capabilities = cmp_nvim_lsp.default_capabilities()
-
-	lspconfig["emmet_ls"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
+	local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 	lspconfig["lua_ls"].setup({
 		capabilities = capabilities,
@@ -52,39 +49,6 @@ function M.config()
 				},
 			},
 		},
-	})
-
-	lspconfig["bashls"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-
-	lspconfig["clangd"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-
-	lspconfig["gopls"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-
-	lspconfig["jdtls"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		root_dir = function()
-			return vim.fn.getcwd()
-		end,
-	})
-
-	lspconfig["marksman"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-
-	lspconfig["pyright"].setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
 	})
 
 	lspconfig["tsserver"].setup({
