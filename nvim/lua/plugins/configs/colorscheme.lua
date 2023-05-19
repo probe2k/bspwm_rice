@@ -1,4 +1,4 @@
-vim.cmd.colorscheme "tokyonight-night"
+vim.cmd.colorscheme 'tokyonight-night'
 
 vim.api.nvim_set_hl(0, 'NonText', { ctermbg = none })
 vim.api.nvim_set_hl(0, 'Normal', { guibg = none, ctermbg = none })

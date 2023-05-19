@@ -1,7 +1,7 @@
 local M = {}
 
 function M.config()
-	local status, bufferline = pcall(require, "bufferline")
+	local status, bufferline = pcall(require, 'bufferline')
 	if not status then
 		return
 	end
@@ -18,11 +18,11 @@ function M.config()
 			right_trunc_marker = '',
 			separator_style = 'thin',
 			color_icons = true,
-			diagnostics = "nvim_lsp",
+			diagnostics = 'nvim_lsp',
 			diagnostics_update_in_insert = false,
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)
-				local icon = level:match("error") and " " or " "
-				return " " .. icon .. count
+				local icon = level:match('error') and ' ' or ' '
+				return ' ' .. icon .. count
 			end,
 		},
 	})

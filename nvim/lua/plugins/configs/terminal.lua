@@ -1,7 +1,7 @@
 local M = {}
 
 function M.config()
-	local status, toggleterm = pcall(require, "toggleterm")
+	local status, toggleterm = pcall(require, 'toggleterm')
 	if not status then
 		return
 	end
@@ -15,7 +15,7 @@ function M.config()
 		start_in_insert = true,
 		insert_mappings = true,
 		persist_size = true,
-		direction = "float",
+		direction = 'float',
 		close_on_exit= true,
 		shell = vim.o.shell,
 		float_opts = {
@@ -25,11 +25,11 @@ function M.config()
 			height = function()
 				return math.ceil(vim.o.lines * 0.7)
 			end,
-			border = "curved",
+			border = 'curved',
 			winblend = 0,
 			highlights = {
-				border = "Normal",
-				background = "Normal",
+				border = 'Normal',
+				background = 'Normal',
 			},
 		},
 	})

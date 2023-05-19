@@ -5,52 +5,52 @@ local hide_in_width = function()
 end
 
 local diff = {
-	"diff",
+	'diff',
 	colored = true,
 	symbols = {
-		added = " ",
-		modified = " ",
-		removed = " ",
+		added = ' ',
+		modified = ' ',
+		removed = ' ',
 	},
 }
 
 local diagnostics = {
-	"diagnostics",
-	sources = { "nvim_diagnostic" },
+	'diagnostics',
+	sources = { 'nvim_diagnostic' },
 	sections = {
-		"info",
-		"error",
-		"warn",
-		"hint",
+		'info',
+		'error',
+		'warn',
+		'hint',
 	},
 	symbols = {
-		error = "ﮊ ",
-		warn = " ",
-		hint = " ",
-		info = " ",
+		error = 'ﮊ ',
+		warn = ' ',
+		hint = ' ',
+		info = ' ',
 	},
 	colored = true,
 	always_visible = false,
 }
 
 local filetype = {
-	"filetype",
+	'filetype',
 	icons_enabled = true,
 }
 
 local location = {
-	"location",
+	'location',
 	padding = 1,
 }
 
 local lsp_progess = function()
-	msg = msg or "LS Inactive"
+	msg = msg or 'LS Inactive'
 	local buf_clients = vim.lsp.buf_get_clients()
 
 	if next(buf_clients) == nil then
 		-- TODO: clean up this if statement
-		if type(msg) == "boolean" or #msg == 0 then
-			return "LS Inactive"
+		if type(msg) == 'boolean' or #msg == 0 then
+			return 'LS Inactive'
 		end
 		return msg
 	end
@@ -58,7 +58,7 @@ local lsp_progess = function()
 	local buf_ft = vim.bo.filetype
 	local buf_client_names = {}
 	local copilot_active = false
-	local null_ls = require("null-ls")
+	local null_ls = require('null-ls')
 	local alternative_methods = {
 		null_ls.methods.DIAGNOSTICS,
 		null_ls.methods.DIAGNOSTICS_ON_OPEN,
@@ -67,17 +67,17 @@ local lsp_progess = function()
 
 	-- add client
 	for _, client in pairs(buf_clients) do
-		if client.name ~= "null-ls" and client.name ~= "copilot" then
+		if client.name ~= 'null-ls' and client.name ~= 'copilot' then
 			table.insert(buf_client_names, client.name)
 		end
 
-		if client.name == "copilot" then
+		if client.name == 'copilot' then
 			copilot_active = true
 		end
 	end
 
 	function list_registered_providers_names(filetype)
-		local s = require("null-ls.sources")
+		local s = require('null-ls.sources')
 		local available_sources = s.get_available(filetype)
 		local registered = {}
 		for _, source in ipairs(available_sources) do
@@ -107,10 +107,10 @@ local lsp_progess = function()
 	vim.list_extend(buf_client_names, supported_linters)
 	local unique_client_names = vim.fn.uniq(buf_client_names)
 
-	local language_servers = " " .. table.concat(unique_client_names, ", ") .. ""
+	local language_servers = ' ' .. table.concat(unique_client_names, ', ') .. ''
 
 	if copilot_active then
-		language_servers = language_servers .. "%#SLCopilot#" .. ""
+		language_servers = language_servers .. '%#SLCopilot#' .. ''
 	end
 
 	return language_servers
@@ -118,28 +118,28 @@ end
 
 local custom_icons = {
 	function()
-		return ""
+		return ''
 	end,
-	separator = { left = "", right = "" },
+	separator = { left = '', right = '' },
 }
 
 local modes = {
-	"mode",
-	separator = { left = "", right = "" },
+	'mode',
+	separator = { left = '', right = '' },
 }
 
 local branch = {
-	"branch",
-	icon = "",
+	'branch',
+	icon = '',
 	{
 		function ()
-			return " "
+			return ' '
 		end
 	}
 }
 
 function M.config()
-	local status, lualine = pcall(require, "lualine")
+	local status, lualine = pcall(require, 'lualine')
 	if not status then
 		return
 	end
@@ -148,10 +148,10 @@ function M.config()
 		options = {
 			globalstatus = true,
 			icons_enabled = true,
-			theme = "tokyonight",
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
-			disabled_filetypes = { "alpha", "dashboard", "packer" },
+			theme = 'tokyonight',
+			component_separators = { left = '', right = '' },
+			section_separators = { left = '', right = '' },
+			disabled_filetypes = { 'alpha', 'dashboard', 'packer' },
 			always_divide_middle = true,
 		},
 		sections = {
@@ -161,17 +161,17 @@ function M.config()
 			},
 			lualine_b = {
 				{
-					"filetype",
+					'filetype',
 					icon_only = true,
 					colored = false,
 					padding = 1,
-					color = { bg = "#2a2c3f" }
+					color = { bg = '#2a2c3f' }
 				},
 				{
-					"filename",
+					'filename',
 					padding = 1,
-					separator = { left = "", right = "" },
-					color = { bg = "#2a2c3f"}
+					separator = { left = '', right = '' },
+					color = { bg = '#2a2c3f'}
 				},
 			},
 			lualine_c = {
@@ -185,28 +185,28 @@ function M.config()
 				},
 				{
 					function()
-						return " "
+						return ' '
 					end,
-					separator = { left = "", right = "" },
-					color = { bg = "#8FBCBB", fg = "#000000" },
+					separator = { left = '', right = '' },
+					color = { bg = '#8FBCBB', fg = '#000000' },
 				},
-				"progress",
+				'progress',
 				{
 					function()
-						return ""
+						return ''
 					end,
-					separator = { left = "", right = "" },
-					color = { bg = "#ECD3A0", fg = "#000000" },
+					separator = { left = '', right = '' },
+					color = { bg = '#ECD3A0', fg = '#000000' },
 				},
 				{
-					"location",
+					'location',
 				},
 				{
 					function()
-						return ""
+						return ''
 					end,
-					separator = { left = "", right = "" },
-					color = { bg = "#86AAEC", fg = "#000000" },
+					separator = { left = '', right = '' },
+					color = { bg = '#86AAEC', fg = '#000000' },
 				},
 			},
 			lualine_y = {},

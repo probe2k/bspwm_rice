@@ -129,8 +129,8 @@ return {
 	-- configure treesitter
 	{
 		'nvim-treesitter/nvim-treesitter',
-		cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-		build = ":TSUpdate",
+		cmd = { 'TSInstall', 'TSBufEnable', 'TSBufDisable', 'TSModuleInfo' },
+		build = ':TSUpdate',
 		init = function()
 			require('core.utils').lazy_load 'nvim-treesitter'
 		end,

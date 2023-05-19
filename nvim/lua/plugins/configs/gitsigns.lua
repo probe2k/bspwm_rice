@@ -1,7 +1,7 @@
 local M = {}
 
 function M.config()
-	local status, gitsigns = pcall(require, "gitsigns")
+	local status, gitsigns = pcall(require, 'gitsigns')
 	if not status then
 		return
 	end

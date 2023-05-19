@@ -14,17 +14,17 @@ function M.config()
 	mason.setup({
 		ui = {
 			icons = {
-				package_pending = " ",
-				package_installed = "󰄳 ",
-				package_uninstalled = " 󰚌",
+				package_pending = ' ',
+				package_installed = '󰄳 ',
+				package_uninstalled = ' 󰚌',
 			},
 		},
 	})
 
 	mason_lspconfig.setup({
 		ensure_installed = {
-			"lua_ls",
-			"tsserver"
+			'lua_ls',
+			'tsserver'
 		},
 	})
 end

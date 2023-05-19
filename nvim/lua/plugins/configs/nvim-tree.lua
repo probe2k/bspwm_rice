@@ -1,7 +1,7 @@
 local M = {}
 
 function M.config()
-	local status, nvimtree = pcall(require, "nvim-tree")
+	local status, nvimtree = pcall(require, 'nvim-tree')
 	if not status then
 		return
 	end
@@ -20,7 +20,7 @@ function M.config()
 	end
 
 	nvimtree.setup({
-		sort_by = "case_sensitive",
+		sort_by = 'case_sensitive',
 		disable_netrw = true,
 		hijack_netrw = true,
 		hijack_cursor = true,
@@ -35,7 +35,7 @@ function M.config()
 				list = list
 			},
 			adaptive_size = false,
-			side = "right",
+			side = 'right',
 			width = 30,
 			hide_root_folder = false,
 		},
@@ -54,7 +54,7 @@ function M.config()
 		renderer = {
 			highlight_git = true,
 			group_empty = true,
-			highlight_opened_files = "none",
+			highlight_opened_files = 'none',
 
 			indent_markers = {
 				enable = true,
@@ -68,26 +68,26 @@ function M.config()
 					git = true,
 				},
 				glyphs = {
-					default = "",
-					symlink = "",
+					default = '',
+					symlink = '',
 					folder = {
-						default = "",
-						empty = "",
-						empty_open = "",
-						open = "",
-						symlink = "",
-						symlink_open = "",
-						arrow_open = "",
-						arrow_closed = "",
+						default = '',
+						empty = '',
+						empty_open = '',
+						open = '',
+						symlink = '',
+						symlink_open = '',
+						arrow_open = '',
+						arrow_closed = '',
 					},
 					git = {
-						unstaged = "✗",
-						staged = "✓",
-						unmerged = "",
-						renamed = "➜",
-						untracked = "★",
-						deleted = "",
-						ignored = "◌",
+						unstaged = '✗',
+						staged = '✓',
+						unmerged = '',
+						renamed = '➜',
+						untracked = '★',
+						deleted = '',
+						ignored = '◌',
 					},
 				},
 			},
