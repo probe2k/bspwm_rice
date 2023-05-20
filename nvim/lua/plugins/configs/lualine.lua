@@ -1,8 +1,9 @@
+---@diagnostic disable: lowercase-global
 local M = {}
 
-local hide_in_width = function()
-	return vim.fn.winwidth(0) > 80
-end
+--local hide_in_width = function()
+--	return vim.fn.winwidth(0) > 80
+--end
 
 local diff = {
 	'diff',
@@ -33,15 +34,15 @@ local diagnostics = {
 	always_visible = false,
 }
 
-local filetype = {
-	'filetype',
-	icons_enabled = true,
-}
+--local filetype = {
+--	'filetype',
+--	icons_enabled = true,
+--}
 
-local location = {
-	'location',
-	padding = 1,
-}
+--local location = {
+--	'location',
+--	padding = 1,
+--}
 
 local lsp_progess = function()
 	msg = msg or 'LS Inactive'
@@ -156,7 +157,7 @@ function M.config()
 		},
 		sections = {
 			lualine_a = {
---				custom_icons,
+				custom_icons,
 				modes,
 			},
 			lualine_b = {
