@@ -36,7 +36,7 @@ set.cmdheight = 0
 
 -- setup lcs
 set.list = true
-set.listchars = { tab = '  ', eol = '󱞱', trail = '•', space = '⋅', precedes = '←', extends = '→' }
+set.listchars = { tab = '  ', eol = '↲', trail = '•', space = '⋅', precedes = '←', extends = '→' }
 set.fillchars = {
 	stl = ' ',
 	stlnc = ' ',
