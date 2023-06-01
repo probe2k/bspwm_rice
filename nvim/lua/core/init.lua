@@ -12,8 +12,8 @@ set.smartcase = true
 set.wrap = false
 
 -- tabbing and indents
-set.tabstop = 4
-set.shiftwidth = 4
+set.tabstop = 2
+set.shiftwidth = 2
 set.smartindent = true
 
 -- term color
