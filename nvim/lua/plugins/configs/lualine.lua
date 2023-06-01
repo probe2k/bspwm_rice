@@ -117,12 +117,12 @@ local lsp_progess = function()
 	return language_servers
 end
 
-local custom_icons = {
-	function()
-		return ' '
-	end,
-	--separator = { left = '', right = '' },
-}
+--local custom_icons = {
+--	function()
+--		return ''
+--	end,
+--	--separator = { left = '', right = '' },
+--}
 
 local modes = {
 	'mode',
@@ -157,7 +157,7 @@ function M.config()
 		},
 		sections = {
 			lualine_a = {
-				custom_icons,
+				-- custom_icons,
 				modes,
 			},
 			lualine_b = {
