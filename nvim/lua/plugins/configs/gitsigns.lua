@@ -1,12 +1,12 @@
-local M = {}
+local options = {
+	signs = {
+		add = { text = "│" },
+		change = { text = "│" },
+		delete = { text = "󰍵" },
+		topdelete = { text = "‾" },
+		changedelete = { text = "~" },
+		untracked = { text = "│" },
+	},
+}
 
-function M.config()
-	local status, gitsigns = pcall(require, 'gitsigns')
-	if not status then
-		return
-	end
-
-	gitsigns.setup()
-end
-
-return M
+return options

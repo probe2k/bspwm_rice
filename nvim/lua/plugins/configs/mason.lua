@@ -1,32 +1,21 @@
-local M = {}
+local options = {
+	ensure_installed = {
+		'lua-language-server',
+		'typescript-language-server',
+		'gopls'
+	},
 
-function M.config()
-	local mason_status, mason = pcall(require, 'mason')
-	if not mason_status then
-		return
-	end
+	PATH = 'skip',
 
-	local mason_lspconfig_status, mason_lspconfig = pcall(require, 'mason-lspconfig')
-	if not mason_lspconfig_status then
-		return
-	end
-
-	mason.setup({
-		ui = {
-			icons = {
-				package_pending = ' ',
-				package_installed = '󰄳 ',
-				package_uninstalled = ' 󰚌',
-			},
+	ui = {
+		icons = {
+			package_pending = ' ',
+			package_installed = '󰄳 ',
+			package_uninstalled = ' 󰚌',
 		},
-	})
+	},
 
-	mason_lspconfig.setup({
-		ensure_installed = {
-			'lua_ls',
-			'tsserver'
-		},
-	})
-end
+	max_concurrent_installers = 10,
+}
 
-return M
+return options

@@ -1,42 +1,12 @@
-local M = {}
+local options = {
+	ensure_installed = { "lua" },
 
-function M.config()
-	local status, treesitter = pcall(require, 'nvim-treesitter.configs')
-	if not status then
-		return
-	end
+	highlight = {
+		enable = true,
+		use_languagetree = true,
+	},
 
-	treesitter.setup({
-		highlight = { enable = true },
-		indent = { enable = true },
-		ensure_installed = {
-			'json',
-			'javascript',
-			'java',
-			'yaml',
-			'html',
-			'css',
-			'markdown',
-			'bash',
-			'lua',
-			'dockerfile',
-			'gitignore',
-			'go',
-			'c',
-			'cmake',
-			'cpp',
-			'dart',
-			'dockerfile',
-			'go',
-			'gomod',
-			'gosum',
-			'python',
-			'rust',
-			'markdown',
-			'markdown_inline',
-		},
-		auto_install = true,
-	})
-end
+	indent = { enable = true },
+}
 
-return M
+return options

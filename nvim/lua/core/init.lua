@@ -32,7 +32,7 @@ set.autoread = true
 set.mouse = ''
 
 -- remove cmd on idle
-set.cmdheight = 0
+-- set.cmdheight = 0
 
 -- setup lcs
 set.list = true
