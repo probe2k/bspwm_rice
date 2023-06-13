@@ -1,5 +1,5 @@
 local default_plugins = {
-	{ 'nvim-tree/nvim-web-devicons', event = 'VeryLazy' },
+	'nvim-tree/nvim-web-devicons',
 
 	{
 		'folke/tokyonight.nvim',
@@ -16,8 +16,7 @@ local default_plugins = {
 		init = function()
 			require('core.utils').lazy_load 'indent-blankline.nvim'
 		end,
-		opts = function()
-			return require 'plugins.configs.blankline'
+		opts = function() return require 'plugins.configs.blankline'
 		end,
 		config = function(_, opts)
 			require('indent_blankline').setup(opts)
@@ -177,4 +176,4 @@ local default_plugins = {
 	},
 }
 
-require('lazy').setup(default_plugins, require('plugins.configs.lazy_nvim').lazy_nvim)
+require('lazy').setup(default_plugins, require 'plugins.configs.lazy_nvim')
