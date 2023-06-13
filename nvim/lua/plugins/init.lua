@@ -3,6 +3,7 @@ local default_plugins = {
 
 	{
 		'folke/tokyonight.nvim',
+--		event = { 'BufReadPost', 'BufNewFile' },
 		init = function()
 			require('core.utils').lazy_load 'tokyonight.nvim'
 		end,
@@ -13,9 +14,10 @@ local default_plugins = {
 
 	{
 		'lukas-reineke/indent-blankline.nvim',
-		init = function()
-			require('core.utils').lazy_load 'indent-blankline.nvim'
-		end,
+		event = { 'BufReadPost', 'BufNewFile' },
+--		init = function()
+--			require('core.utils').lazy_load 'indent-blankline.nvim'
+--		end,
 		opts = function() return require 'plugins.configs.blankline'
 		end,
 		config = function(_, opts)
@@ -25,9 +27,10 @@ local default_plugins = {
 
 	{
 		'nvim-treesitter/nvim-treesitter',
-		init = function()
-			require('core.utils').lazy_load 'nvim-treesitter'
-		end,
+		event = { 'BufReadPost', 'BufNewFile' },
+--		init = function()
+--			require('core.utils').lazy_load 'nvim-treesitter'
+--		end,
 		cmd = { 'TSInstall', 'TSBufEnable', 'TSBufDisable', 'TSModuleInfo' },
 		build = ':TSUpdate',
 		opts = function()
@@ -80,9 +83,10 @@ local default_plugins = {
 
 	{
 		'neovim/nvim-lspconfig',
-		init = function()
-			require('core.utils').lazy_load 'nvim-lspconfig'
-		end,
+		event = { 'BufReadPost', 'BufNewFile' },
+--		init = function()
+--			require('core.utils').lazy_load 'nvim-lspconfig'
+--		end,
 		dependencies = {
 			{
 				'glepnir/lspsaga.nvim',
@@ -161,6 +165,28 @@ local default_plugins = {
 		end,
 		config = function(_, opts)
 			require('telescope').setup(opts)
+		end,
+	},
+
+	{
+		'nvim-lualine/lualine.nvim',
+		event = 'VeryLazy',
+		opts = function()
+			return require 'plugins.configs.lualine'
+		end,
+		config = function(_, opts)
+			require('lualine').setup(opts)
+		end
+	},
+
+	{
+		'akinsho/bufferline.nvim',
+		event = 'VeryLazy',
+		opts = function()
+			return require 'plugins.configs.bufferline'
+		end,
+		config = function(_, opts)
+			require('bufferline').setup(opts)
 		end,
 	},
 

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.cmd.colorscheme 'tokyonight-night'
 
 vim.api.nvim_set_hl(0, 'NonText', { ctermbg = none })
