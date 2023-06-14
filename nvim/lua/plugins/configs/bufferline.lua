@@ -1,7 +1,7 @@
 local options = {
 	options = {
 		indicator = {
-			icon = ' ',
+			icon = '  ',
 			style = 'icon',
 		},
 		modified_icon = '●',
