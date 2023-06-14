@@ -68,7 +68,7 @@ local location = {
 	color = { bg = '#59adf6', fg = '#111111' },
 }
 
-local theme = require('lualine.themes.tokyonight')
+local theme = require('lualine.themes.auto')
 theme.normal.c.bg = nil
 
 local options = {
