@@ -2,6 +2,7 @@ local options = {
 	ensure_installed = {
 		'lua-language-server',
 		'typescript-language-server',
+		'emmet-ls',
 		'gopls'
 	},
 

@@ -2,7 +2,7 @@ local actions = require('telescope.actions')
 
 local options = {
 	defaults = {
-		prompt_prefix = '   ',
+		prompt_prefix = '   ',
 		selection_caret = '❯ ',
 		mappings = {
 			i = {

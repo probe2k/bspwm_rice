@@ -76,4 +76,9 @@ require('lspconfig').gopls.setup {
 	capabilities = M.capabilities,
 }
 
+require('lspconfig').emmet_ls.setup {
+	on_attach = M.on_attach,
+	capabilities = M.capabilities,
+}
+
 return M
