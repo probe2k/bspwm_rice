@@ -50,22 +50,22 @@ super + p
 
 # screenshots
 Print
-	scrot --compression 0 100 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
+	scrot --compression 0 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 ctrl + Print
-	scrot -u --compression 0 100 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
+	scrot -u --compression 0 '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 shift + @Print
-	scrot -s --compression 0 100 -l style=dash --freeze '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
+	scrot -s --compression 0 -l style=dash --freeze '/home/probe/Pictures/Screenshots/%F_%T_$wx$h.png'
 
 super + Print
-	scrot --compression 0 100 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot --compression 0 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 super + ctrl + Print
-	scrot -u --compression 0 100 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot -u --compression 0 '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 super + shift + @Print
-	scrot -s --compression 0 100 -l style=dash --freeze '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot -s --compression 0 -l style=dash --freeze '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 # volume
 XF86AudioRaiseVolume
