@@ -48,7 +48,7 @@ local filetype = {
 	colored = false,
 	padding = 1,
 	color = { bg = '#ffb480', fg = '#111111' },
-	separator = { left = '', right = '' },
+	separator = { left = '', right = '' },
 }
 
 local filename = {
@@ -83,9 +83,9 @@ local options = {
 	},
 
 	sections = {
-		lualine_a = { custom_icon, mode },
-		lualine_b = { filetype, filename },
-		lualine_c = { branch },
+		lualine_a = { custom_icon, mode, },
+		lualine_b = { branch },
+		lualine_c = { '%=', filetype, filename },
 		lualine_x = { diff, diagnostics, location },
 		lualine_y = {},
 		lualine_z = {},
