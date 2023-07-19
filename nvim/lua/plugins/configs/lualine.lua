@@ -48,7 +48,7 @@ local filetype = {
 --	colored = false,
 --	padding = 1,
 	function ()
-		return ''
+		return ' '
 	end,
 	color = { bg = '#ffb480', fg = '#111111' },
 	separator = { left = '', right = '' },
