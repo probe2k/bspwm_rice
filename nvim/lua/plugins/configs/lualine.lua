@@ -43,10 +43,13 @@ local custom_icon = {
 }
 
 local filetype = {
-	'filetype',
-	icon_only = true,
-	colored = false,
-	padding = 1,
+--	'filetype',
+--	icon_only = true,
+--	colored = false,
+--	padding = 1,
+	function ()
+		return ''
+	end,
 	color = { bg = '#ffb480', fg = '#111111' },
 	separator = { left = '', right = '' },
 }
@@ -55,6 +58,7 @@ local filename = {
 	'filename', padding = 1,
 	color = { bg = '#c780e8', fg = '#111111' },
 	separator = { left = '', right = '' },
+	path = 4,
 }
 
 local mode = {
