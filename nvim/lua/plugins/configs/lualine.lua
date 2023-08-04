@@ -7,7 +7,7 @@ local diff = {
 		removed = ' ',
 	},
 	color = { bg = '#1c2e4a' },
-	separator = { left = '', right = '' },
+	separator = { left = '░▒▓', right = '' },
 }
 
 local diagnostics = {
@@ -22,7 +22,7 @@ local diagnostics = {
 		hint = ' ',
 		info = ' ',
 	}, colored = true, always_visible = false,
-	separator = { left = '', right = '' },
+	separator = { left = '░▒▓', right = '' },
 }
 local branch = {
 	'branch',
@@ -31,14 +31,14 @@ local branch = {
 		return ' '
 	end,
 	color = { bg = '#42d6a4', fg = '#111111' },
-	separator = { left = '', right = '' },
+	separator = { left = '', right = '▓▒░' },
 }
 
 local custom_icon = {
 	function()
 		return '󰣇 '
 	end,
-	separator = { left = '', right = '' },
+	separator = { left = '░▒▓', right = '▓▒░' },
 	color = { bg = '#ff6961', fg = '#111111' }
 }
 
@@ -50,25 +50,25 @@ local filetype = {
 	function ()
 		return '󰈔'
 	end,
+	separator = { left = '░▒▓', right = '▓▒░' },
 	color = { bg = '#ffb480', fg = '#111111' },
-	separator = { left = '', right = '' },
 }
 
 local filename = {
 	'filename', padding = 1,
 	color = { bg = '#c780e8', fg = '#111111' },
-	separator = { left = '', right = '' },
+	separator = { left = '', right = '▓▒░' },
 	path = 4,
 }
 
 local mode = {
 	'mode',
-	separator = { left = '', right = '' },
+	separator = { left = '', right = '▓▒░' },
 }
 
 local location = {
 	'location',
-	separator = { left = '', right = '' },
+	separator = { left = '░▒▓', right = '▓▒░' },
 	color = { bg = '#59adf6', fg = '#111111' },
 }
 
