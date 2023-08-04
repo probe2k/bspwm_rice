@@ -38,18 +38,15 @@ local custom_icon = {
 	function()
 		return '󰣇 '
 	end,
-	separator = { left = '░▒▓', right = '▓▒░' },
+	separator = { left = '', right = '▓▒░' },
 	color = { bg = '#ff6961', fg = '#111111' }
 }
 
 local filetype = {
---	'filetype',
---	icon_only = true,
---	colored = false,
---	padding = 1,
-	function ()
-		return '󰈔'
-	end,
+	'filetype',
+	icon_only = true,
+	colored = false,
+	padding = 1,
 	separator = { left = '░▒▓', right = '▓▒░' },
 	color = { bg = '#ffb480', fg = '#111111' },
 }
@@ -57,7 +54,7 @@ local filetype = {
 local filename = {
 	'filename', padding = 1,
 	color = { bg = '#c780e8', fg = '#111111' },
-	separator = { left = '', right = '▓▒░' },
+	separator = { left = '░▒▓', right = '▓▒░' },
 	path = 4,
 }
 
@@ -68,7 +65,7 @@ local mode = {
 
 local location = {
 	'location',
-	separator = { left = '░▒▓', right = '▓▒░' },
+	separator = { left = '░▒▓', right = '' },
 	color = { bg = '#59adf6', fg = '#111111' },
 }
 
