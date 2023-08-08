@@ -32,7 +32,7 @@ set.autoread = true
 set.mouse = ''
 
 -- remove cmd on idle
--- set.cmdheight = 0
+set.cmdheight = 0
 
 -- setup lcs
 set.list = true
@@ -70,8 +70,12 @@ set.splitbelow = true
 set.splitright = true
 
 -- miscellaneous
-for _, provider in ipairs { 'node', 'perl', 'python3', 'ruby' } do
+for _, provider in ipairs { 'node', 'perl', 'python', 'ruby' } do
 	vim.g['loaded_' .. provider .. '_provider'] = 0
+end
+
+for _, lang in ipairs { 'rust', 'python' } do
+	vim.g[lang .. '_recommended_style'] = false
 end
 
 vim.env.PATH = vim.env.PATH .. ":" .. vim.fn.stdpath "data" .. "/mason/bin"
