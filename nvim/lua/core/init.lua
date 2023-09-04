@@ -74,8 +74,8 @@ for _, provider in ipairs { 'node', 'perl', 'python', 'ruby' } do
 	vim.g['loaded_' .. provider .. '_provider'] = 0
 end
 
-for _, lang in ipairs { 'rust', 'python' } do
-	vim.g[lang .. '_recommended_style'] = false
-end
+--for _, lang in ipairs { 'rust', 'python' } do
+--	vim.g[lang .. '_recommended_style'] = false
+--end
 
 vim.env.PATH = vim.env.PATH .. ":" .. vim.fn.stdpath "data" .. "/mason/bin"

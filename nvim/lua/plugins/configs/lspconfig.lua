@@ -18,7 +18,7 @@ M.on_attach = function(client, bufnr)
 	keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 	keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
 
-	local signs = { Error = '✗ ', Warn = ' ', Hint = ' ', Info = ' ' }
+	local signs = { Error = '󰚌 ', Warn = ' ', Hint = ' ', Info = ' ' }
 	for type, icon in pairs(signs) do
 		local hl = 'DiagnosticSign' .. type
 		vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
@@ -66,19 +66,19 @@ require('lspconfig').lua_ls.setup {
 	},
 }
 
-require('lspconfig').tsserver.setup {
-	on_attach = M.on_attach,
-	capabilities = M.capabilities,
-}
+--require('lspconfig').tsserver.setup {
+--	on_attach = M.on_attach,
+--	capabilities = M.capabilities,
+--}
 
-require('lspconfig').gopls.setup {
-	on_attach = M.on_attach,
-	capabilities = M.capabilities,
-}
+--require('lspconfig').gopls.setup {
+--	on_attach = M.on_attach,
+--	capabilities = M.capabilities,
+--}
 
-require('lspconfig').emmet_ls.setup {
-	on_attach = M.on_attach,
-	capabilities = M.capabilities,
-}
+--require('lspconfig').emmet_ls.setup {
+--	on_attach = M.on_attach,
+--	capabilities = M.capabilities,
+--}
 
 return M

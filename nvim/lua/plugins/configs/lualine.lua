@@ -18,7 +18,7 @@ local diagnostics = {
 		'error',
 		'warn', 'hint',
 	},
-	symbols = { error = 'ﮊ ', warn = ' ',
+	symbols = { error = '󰚌 ', warn = ' ',
 		hint = ' ',
 		info = ' ',
 	}, colored = true, always_visible = false,

@@ -2,13 +2,14 @@ local default_plugins = {
 	'nvim-tree/nvim-web-devicons',
 
 	{
-		'folke/tokyonight.nvim',
---		event = { 'BufReadPost', 'BufNewFile' },
-		init = function()
-			require('core.utils').lazy_load 'tokyonight.nvim'
+		'catppuccin/nvim', name = 'catppuccin',
+		-- event = { 'UIEnter' },
+		init = function() require('core.utils').lazy_load 'catppuccin'
 		end,
+--		opts = function() return require 'plugins.configs.colorscheme'
+--		end,
 		config = function()
-			require('plugins.configs.colorscheme')
+			return require 'plugins.configs.colorscheme'
 		end,
 	},
 
