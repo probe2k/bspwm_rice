@@ -14,11 +14,4 @@ return function(editor)
 		lazy = true,
 		cmd = { 'HexokinaseTurnOn', 'HexokinaseToggle' },
 	})
-
-	editor({
-		'chrisbra/Colorizer',
-		ft = { 'log', 'txt', 'text' },
-		lazy = true,
-		cmd = { 'ColorHighlight', 'ColorUnhighlight' },
-	})
 end
