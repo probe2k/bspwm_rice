@@ -13,7 +13,7 @@
 
 ;; (("and"      @keyword) (#set! conceal "▼"))
 (("end"      @keyword) (#set! conceal "–"))
-(("then"     @keyword) (#set! conceal "↙"))
+(("then"     @keyword) (#set! conceal "󰣉"))
 (("do"       @keyword) (#set! conceal ""))
 
 ;; (("comment_start"    @comment) (#set! conceal "󰡡"))

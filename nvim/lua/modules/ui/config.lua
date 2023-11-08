@@ -1,12 +1,6 @@
 local config = {}
 math.randomseed(os.time())
 
-local winwidth = function()
-	return vim.api.nvim_call_function('winwidth', { 0 })
-end
-
-function config.windline() end
-
 function config.noice()
 	require('noice').setup({
 		cmdline = {
@@ -41,7 +35,7 @@ function config.nvim_bufferline()
 	require('bufferline').setup({
 		options = {
 			indicator = {
-				icon = '▓▒░',
+				icon = '▊',
 				style = 'icon',
 			},
 			truncate_names = false,
@@ -54,7 +48,7 @@ function config.nvim_bufferline()
 			right_trunc_marker = '<U+F0A9>',
 			diagnostics = 'nvim_lsp',
 			diagnostics_indicator = function(count, level)
-				local icon = level:match('error') and ' ' or ' '
+				local icon = level:match('error') and ' ' or ' '
 				return ' ' .. icon .. count
 			end,
 			always_show_bufferline = false,
@@ -88,6 +82,8 @@ local function on_attach(bufnr)
 	vim.keymap.set('n', '=', api.tree.change_root_to_node, opts('CD'))
 	vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
 	vim.keymap.set('n', 's', api.node.open.horizontal, opts('Open: Horizontal Split'))
+	vim.keymap.set('n', 'E', api.tree.expand_all, opts('Expand All'))
+	vim.keymap.set('n', 'W', api.tree.collapse_all, opts('Collapse All'))
 end
 
 function config.nvim_tree()
@@ -166,18 +162,35 @@ function config.nvim_tree()
 	})
 end
 
-function config.cat()
-	require('catppuccin').setup({
-		flavor = 'mocha',
-		lsp_trouble = false,
-		transparent_background = true,
-		dim_inactive = { enabled = false },
-	})
+--function config.cat()
+--	require('catppuccin').setup({
+--		flavor = 'mocha',
+--		lsp_trouble = false,
+--		transparent_background = true,
+--		dim_inactive = { enabled = false },
+--	})
+--
+--	vim.cmd('colorscheme catppuccin')
+--end
 
-	vim.cmd('colorscheme catppuccin')
+function config.starry()
+	vim.g.starry_style = 'earlysummer'
+  vim.g.starry_bold = true
+  vim.g.starry_italic_comments = true
+  vim.g.starry_italic_keywords = false
+  vim.g.starry_italic_functions = true
+  vim.g.starry_italic_variables = false
+  vim.g.starry_italic_string = false
+  vim.g.starry_contrast = true
+  vim.g.starry_borders = true
+  vim.g.starry_set_hl = true
+  vim.g.starry_style_fix = true
+	vim.g.starry_disable_background = true
+
+	vim.cmd('colorscheme starry')
 end
 
-vim.api.nvim_create_user_command('Transparent', function(opts)
+vim.api.nvim_create_user_command('Transparent', function()
 	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
 	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
 	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })

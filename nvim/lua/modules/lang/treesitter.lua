@@ -6,8 +6,6 @@ local treesitter = function()
 		return
 	end
 
-	lprint('ts enable...')
-
 	require('nvim-treesitter.configs').setup({
 		highlight = {
 			enable = true,
@@ -40,8 +38,6 @@ local treesitter_obj = function()
 
 		ensure_installed = ts_ensure_installed,
 	})
-
-	lprint('loading ts obj...')
 end
 
 local treesitter_ref = function()

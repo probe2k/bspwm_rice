@@ -10,7 +10,6 @@ function config.refactor()
 
 	refactor.setup({})
 
-	lprint('refactor')
 	_G.ts_refactors = function()
 		local function _refactor(prompt_bufnr)
 			local content = require('telescope.actions.state').get_selected_entry(prompt_bufnr)

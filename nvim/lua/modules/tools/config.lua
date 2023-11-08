@@ -45,17 +45,32 @@ function config.floaterm()
 			winblend = 3,
 			highlights = {
 				border = 'Normal',
-				background = 'Normal',
+--				background = 'Normal',
 			},
 		},
 	})
 end
 
-function config.mkdp()
-	vim.g.mkdp_command_for_global = 1
-	vim.cmd(
-	[[let g:mkdp_preview_options = { 'mkit': {}, 'katex': {}, 'uml': {}, 'maid': {}, 'disable_sync_scroll': 0, 'sync_scroll_type': 'middle', 'hide_yaml_meta': 1, 'sequence_diagrams': {}, 'flowchart_diagrams': {}, 'content_editable': v:true, 'disable_filename': 0 }]]
-	)
+function config.git()
+	require('gitsigns').setup({
+		signs = {
+			add = { text = "│" },
+			change = { text = "│" },
+			delete = { text = "" },
+			topdelete = { text = "‾" },
+			changedelete = { text = "~" },
+			untracked = { text = "│" },
+		},
+		update_debounce = 400,
+		numhl = true,
+		word_diff = true,
+		watch_gitdir = { interval = 1000, follow_files = true },
+		status_formatter = nil, -- Use default
+		debug_mode = false,
+		current_line_blame = true,
+		current_line_blame_opts = { delay = 1500 },
+		diff_opts = { internal = true },
+	})
 end
 
 return config

@@ -8,7 +8,6 @@ if argc > 0 then
 	end
 end
 
-lprint('lazy')
 local loader = require('utils.helper').loader
 local start = vim.loop.now()
 
@@ -33,9 +32,7 @@ end
 
 function Lazyload()
 	require('core.helper').init()
-	lprint('lazy core plugins start', vim.loop.now() - start)
 	createdir()
-	lprint('I am lazy')
 
 	loader('plenary.nvim')
 
@@ -44,13 +41,10 @@ function Lazyload()
 
 	loader('nvim-treesitter')
 
-	lprint('lazy core lsp plugins loaded', vim.loop.now() - start)
 	local plugins = 'nvim-treesitter-textobjects nvim-ts-autotag nvim-ts-context-commentstring nvim-treesitter-textsubjects nvim-treesitter-context'
 	loader(plugins)
 	loader('refactoring.nvim')
 	loader('indent-blankline.nvim')
-
-	lprint('lsp loaded')
 
 	loader('bufferline.nvim')
 
@@ -64,10 +58,15 @@ vim.defer_fn(function()
 end, lazy_timer)
 
 vim.defer_fn(function()
-	lprint('lazy telescope start', vim.loop.now() - start)
 	vim.cmd('highlight clear ColorColumn')
-	loader('windline.nvim')
 	loader('noice.nvim')
-	require('modules.ui.eviline')
+	require('modules.ui.lualine')
 	loader('vim-hexokinase')
 end, lazy_timer + 5)
+
+vim.defer_fn(function()
+	local gitrepo = vim.fn.isdirectory('.git/index')
+	if gitrepo then
+		loader('gitsigns.nvim')
+	end
+end, lazy_timer + 10)

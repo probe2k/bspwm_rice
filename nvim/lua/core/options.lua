@@ -35,8 +35,8 @@ local function load_options()
 		equalalways    = false;
 		laststatus     = 3;
 		display        = "lastline";
-		showbreak      = "󱞩";
 		list           = true;
+		showbreak      = "󱞩";
 		listchars      = "tab:┊ ,nbsp:+,trail:·,extends:→,precedes:←,eol:↲";
 		title          = true;
 		background     = "dark";

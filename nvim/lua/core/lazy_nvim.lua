@@ -33,7 +33,6 @@ function lazy:load_modules_lazyages()
   for _, f in pairs(list) do
     local _, pos = f:find(modules_dir)
     f = f:sub(pos - 6, #f - 4)
-    lprint(f) -- modules/completion/plugins ...
     if not vim.tbl_contains(disable_modules, f) then
       local plugins = require(f)
       plugins(lazy.add)

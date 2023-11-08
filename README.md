@@ -15,5 +15,3 @@
 6. [picom-ibhagwan-git](https://github.com/probe2k/bspwm_rice/blob/master/picom/picom.conf)
 
 7. [sxhkd](https://github.com/probe2k/bspwm_rice/blob/master/sxhkd/sxhkdrc)
-
-

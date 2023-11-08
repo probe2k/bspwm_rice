@@ -315,7 +315,6 @@ function M.substitute(from, to, style)
 
   if vim.fn.mode() == 'v' or vim.fn.mode() == 'x' then
     local w, l = M.get_visual_text()
-    -- lprint(l)
     if l == 1 then
       from = w
       to = to or from
@@ -324,7 +323,6 @@ function M.substitute(from, to, style)
     else -- a range specified
       from = vim.fn.getreg('"')
       to = to or from
-      lprint(from, to)
       cmd = string.format(':%%%s/%s/%s/g', style, from, to)
     end
   else

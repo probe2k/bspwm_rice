@@ -11,17 +11,16 @@ return function(tools)
 	})
 
 	tools({
-		'iamcco/markdown-preview.nvim',
-		ft = { 'markdown', 'pandoc.markdown', 'rmd' },
-		cmd = { 'MarkdownPreview' },
-		init = conf.mkdp,
-		lazy = true,
-	})
-
-	tools({
 		'akinsho/toggleterm.nvim',
 		cmd = { 'ToggleTerm', 'TermExec' },
 		event = { 'CmdwinEnter', 'CmdlineEnter' },
 		config = conf.floaterm,
+	})
+
+	tools({
+		'lewis6991/gitsigns.nvim',
+		ft = { 'gitcommit', 'diff' },
+		config = conf.git,
+		lazy = true,
 	})
 end

@@ -1,6 +1,4 @@
-local loading_theme = 'catppuccin'
-
-lprint('loading theme...')
+local loading_theme = 'starry'
 
 local function load_colorscheme(theme)
 	if not theme then

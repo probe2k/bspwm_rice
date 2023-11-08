@@ -3,9 +3,14 @@ local conf = require('modules.ui.config')
 return function(ui)
 	ui({ 'nvim-tree/nvim-web-devicons', lazy = true })
 
+--	ui({
+--		'windwp/windline.nvim',
+--		config = conf.windline,
+--		lazy = true,
+--	})
+
 	ui({
-		'windwp/windline.nvim',
-		config = conf.windline,
+		'nvim-lualine/lualine.nvim',
 		lazy = true,
 	})
 
@@ -40,13 +45,20 @@ return function(ui)
 		config = conf.blankline,
 	})
 
+--	ui({
+--		'catppuccin/nvim',
+--		lazy = true,
+--		name = 'catppuccin',
+--		config = conf.cat,
+--	})
+
 	ui({
-		'catppuccin/nvim',
+		'ray-x/starry.nvim',
 		lazy = true,
-		name = 'catppuccin',
-		config = conf.cat,
+		name = 'starry',
+		config = conf.starry,
 	})
 
-  ui({ 'lambdalisue/glyph-palette.vim' })
+	ui({ 'lambdalisue/glyph-palette.vim' })
 
 end
