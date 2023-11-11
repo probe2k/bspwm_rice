@@ -54,25 +54,6 @@ function autocmd.load_autocmds()
 			-- {"BufWritePre", "*.js,*.rs,*.lua", ":FormatWrite"},
 			{ 'BufWritePost', '*', ":silent! :lua require('harpoon.mark').add_file()" },
 		},
-
-		wins = {
-			{ 'BufEnter', 'NvimTree', [[setlocal  cursorline]] },
-
-			{ 'VimResized', '*', [[tabdo wincmd =]] },
-			{ 'VimLeave', '*', [[if has('nvim') | wshada! | else | wviminfo! | endif]] },
-			{
-				'VimLeavePre',
-				'*',
-				function()
-					require('close_buffers').delete({ type = 'hidden', force = true })
-					require('close_buffers').delete({ regex = 'fugitive' })
-					require('close_buffers').delete({ regex = 'neogit', force = true })
-					require('close_buffers').wipe({ type = 'nameless', force = true })
-				end,
-			},
-
-			{ 'FocusGained', '*', 'checktime' },
-		},
 	}
 
 	autocmd.nvim_create_augroups(definitions)
