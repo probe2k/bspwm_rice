@@ -15,7 +15,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = none
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -35,13 +35,29 @@
 
     height = 200
 
-    offset = 20x40
+		origin = top-right
 
-    close_all = ctrl+space
+		offset = 15x40
 
-    history = mod1+grave
+		progress_bar = true
 
-    # Show how many messages are currently hidden (because of geometry).
+		progress_bar_height = 10
+
+		progress_bar_frame_width = 0
+
+		progress_bar_min_width = 125
+
+		progress_bar_max_width = 250
+
+		progress_bar_corner_radius = 4
+
+		icon_corner_radius = 5
+
+		close_all = ctrl+space
+
+		history = mod1+grave
+
+# Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 
     # Shrink window if it's smaller than the width.  Will be ignored if
@@ -69,13 +85,17 @@
     # Horizontal padding.
     horizontal_padding = 10
 
+		text_icon_padding = 10
+
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 1
+
+		gap_size = 5
 
     # Defines color of the frame around the notification window.
     # frame_color = "#7bc5e4"
-    frame_color = "#00000000"
+    frame_color = "#5c5c5c"
 
     # Define a color for the separator.
     # possible values are:
@@ -83,7 +103,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = frame
+    separator_color = auto
 
     # Sort messages by urgency.
     sort = yes
@@ -101,7 +121,7 @@
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 0
+    line_height = 3
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -137,7 +157,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+		format = "󰟪  %a\n<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -180,7 +200,7 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 0
+    min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 64
@@ -233,7 +253,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 0
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -300,28 +320,64 @@
     # Context menu.
 #    context = ctrl+shift+period
 
+#[urgency_low]
+#    # IMPORTANT: colors have to be defined in quotation marks.
+#    # Otherwise the "#" and following would be interpreted as a comment.
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with low urgency, uncomment to enable
+#    #icon = /path/to/icon
+#
+#[urgency_normal]
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with normal urgency, uncomment to enable
+#    #icon = /path/to/icon
+#
+#[urgency_critical]
+#    background = "#1a1b26"
+#    foreground = "#00ffff"
+#    timeout = 0
+#    # Icon for notifications with critical urgency, uncomment to enable
+#    #icon = /path/to/icon
+
+
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#00000050"
-    foreground = "#00ffff"
+    # background = "#181825"
+		background = "#000000"
+    foreground = "#f5e0dc"
+    frame_color = "#5c5c5c"
+    #frame_color = "#f5c2e7"
+    icon = "/home/probe/.config/dunst/icons/low.svg"
     timeout = 0
     # Icon for notifications with low urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#00000050"
-    foreground = "#00ffff"
+    # background = "#313244"
+		background = "#000000"
+    foreground = "#f5e0dc"
+    frame_color = "#5c5c5c"
+    #frame_color = "#b4befe"
+    icon = "/home/probe/.config/dunst/icons/pokeball.svg"
     timeout = 0
     # Icon for notifications with normal urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#00000050"
-    foreground = "#00ffff"
+    # background = "#f5e0dc"
+		background = "#000000"
+    foreground = "#1e1e2e"
+    frame_color = "#5c5c5c"
+    #frame_color = "#f38ba8"
+    icon = "/home/probe/.config/dunst/icons/critical.svg"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
